@@ -1,0 +1,52 @@
+// Media mixin
+@mixin breakpoint($point) {
+  @if $point==mobile {
+    @media screen and (min-width: $mobile) {
+      @content;
+    }
+  }
+
+  @if $point==tablet {
+    @media screen and (min-width: $tablet) {
+      @content;
+    }
+  }
+
+  @if $point==desktop {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  }
+
+  @if $point==mobile-max {
+    @media screen and (max-width: $mobile-max) {
+      @content;
+    }
+  }
+
+  @if $point==tablet-max {
+    @media screen and (max-width: $tablet-max) {
+      @content;
+    }
+  }
+  @if $point==tablet-area {
+    @media screen and (min-width: $tablet) and (max-width: $tablet-max) {
+      @content;
+    }
+  }
+}
+
+//   Font mixin
+@mixin font(
+  $font-family: $primary-font,
+  $font-weight: 400,
+  $font-size: 16px,
+  $line-height: calc(16/16),
+  $color: #000000
+) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}

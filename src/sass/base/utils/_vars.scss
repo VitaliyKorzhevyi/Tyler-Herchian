@@ -1,0 +1,45 @@
+// Text colors
+$primaryTextColors: #f9f8fa;
+$secondaryTextColors: #fff;
+$transparentTextColors: rgba(213, 233, 245, 0.2);
+$accentTextColors: #fcfeaa;
+$companiesTextColors: #062436;
+$copyrightTextColors: #b8b8b8;
+
+// Background colors
+$primaryBgColors: #062436;
+$secondaryBgColors: #d5e9f5;
+$footerBgColors: #031825;
+
+
+// Buttons bg gradients
+$contactBtnBgGradient: radial-gradient(
+  163.09% 86.67% at 50% 48.89%,
+  rgba(213, 233, 245, 0.2) 8.12%,
+  #ffffff 100%
+);
+$bannerBtnBgGradient: radial-gradient(
+  681.23% 138.89% at 50% 48.89%,
+  rgba(213, 233, 245, 0.2) 8.12%,
+  #ffffff 100%
+);
+
+
+// Icon button bg colors
+$menuIconBgColors: #fff;
+$footerIconBgColors: #D5E9F5;
+$footerIconBgArrowColors: #D5E9F5;
+
+
+// Font
+$primary-font: 'Josefin Sans', sans-serif;
+$secondary-font: 'Libre Baskerville', sans-serif;
+$error-font: 'Montserrat', sans-serif;
+
+
+// Media
+$mobile: 480px;
+$mobile-max: 767.98px;
+$tablet: 768px;
+$tablet-max: 1199.98px;
+$desktop: 1200px;
