@@ -117,8 +117,8 @@
   }
 }
 
-// Блюр
 
+// Блюр
 .blur-effect1 {
   position: absolute;
 //   z-index: 0;
@@ -153,7 +153,7 @@
 
   &__item-menu {
     color: $secondaryTextColors;
-    @include font($primary-font, 400, 14px, calc(16 / 16), $secondaryTextColors);
+    @include font($primary-font, 400, 16px, calc(16 / 16), $secondaryTextColors);
   }
 }
 
