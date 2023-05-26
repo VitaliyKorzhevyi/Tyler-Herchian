@@ -30,19 +30,21 @@
   transform: translateX(20%);
   overflow: hidden;
 
-  // pointer-events: none;
-  // visibility: hidden;
-  // opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
 
   background-color: $primaryBgColors;
 
-  transition: transform 250ms linear;
+  transition: transform 250ms linear,
+  visibility 250ms linear,
+  opacity 250ms linear;
 
   &.is-open {
     transform: translateX(0);
-    // pointer-events: initial;
-    // visibility: visible;
-    // opacity: 1;
+    pointer-events: initial;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
