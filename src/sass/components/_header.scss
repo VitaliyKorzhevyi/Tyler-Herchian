@@ -12,99 +12,43 @@
   border-radius: 2px;
 }
 
-// #menu-toggle {
-//   position: absolute;
-//   top: 20px;
-//   right: 15px;
-//   width: 40px;
-//   height: 40px;
-//   cursor: pointer;
-//   #hamburger {
-//     position: absolute;
-//     height: 100%;
-//     width: 100%;
-//     span {
-//       width: 40px;
-//       height: 1px;
-//       position: relative;
-//       &:nth-child(1) {
-//         transition-delay: 0.5s;
-//       }
-//       &:nth-child(2) {
-//         transition-delay: 0.625s;
-//         margin-top: 19px;
-//       }
-//       &:nth-child(3) {
-//         transition-delay: 0.75s;
-//         margin-top: 19px;
-//         width: 32px;
-//         margin-left: 8px;
-//       }
-//     }
-//   }
-// }
-
 .mobile-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-// #hamburger span {
-//   display: block;
-//   background: $linesColors;
-//   border-radius: 2px;
-// }
-
 // backdrop-menu
 .backdrop-menu {
-  // display: none;
   position: fixed;
   width: 100%;
   z-index: 2;
+
   top: 0px;
   left: 0px;
+
+  transform: translateX(20%);
+  overflow: hidden;
+
+  // pointer-events: none;
+  // visibility: hidden;
+  // opacity: 0;
+
   background-color: $primaryBgColors;
+
+  transition: transform 250ms linear;
+
+  &.is-open {
+    transform: translateX(0);
+    // pointer-events: initial;
+    // visibility: visible;
+    // opacity: 1;
+  }
 }
 
 .mobile-menu {
-  // z-index: 3;
   padding: 20px 15px 0 15px;
 }
-
-// #menu-cross {
-//   position: absolute;
-//   top: 20px;
-//   right: 15px;
-//   width: 40px;
-//   height: 40px;
-//   #cross {
-//     position: absolute;
-//     height: 100%;
-//     width: 100%;
-//     span {
-//       background-color: #ffffff;
-//       &:nth-child(1) {
-//         height: 140%;
-//         width: 1px;
-//         position: absolute;
-//         top: -20%;
-//         left: 20px;
-//         transform: rotate(45deg);
-//         transition-delay: 0.25s;
-//       }
-//       &:nth-child(2) {
-//         width: 140%;
-//         height: 1px;
-//         position: absolute;
-//         left: -18%;
-//         top: 20px;
-//         transform: rotate(45deg);
-//         transition-delay: 0.25s;
-//       }
-//     }
-//   }
-// }
 
 #menu-toggle {
   position: absolute;
@@ -199,27 +143,27 @@
 }
 
 // Блюр
-// .blur-effect1 {
-//   position: absolute;
-//   width: 237px;
-//   height: 165px;
-//   left: -28px;
-//   top: 127px;
+.blur-effect1 {
+  position: absolute;
+  width: 237px;
+  height: 165px;
+  left: -28px;
+  top: 127px;
 
-//   background: #52ffff;
-//   filter: blur(286px);
-// }
+  background: #52ffff;
+  filter: blur(286px);
+}
 
-// .blur-effect2 {
-//   position: absolute;
-//   width: 256px;
-//   height: 241px;
-//   left: 64px;
-//   top: 517px;
+.blur-effect2 {
+  position: absolute;
+  width: 256px;
+  height: 241px;
+  left: 64px;
+  top: 517px;
 
-//   background: #43a5ff;
-//   filter: blur(400px);
-// }
+  background: #43a5ff;
+  filter: blur(400px);
+}
 
 // Elements menu
 .list-menu {
