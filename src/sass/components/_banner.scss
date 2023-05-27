@@ -16,12 +16,34 @@
   }
 }
 
+.bunner-btn-border1 {
+    // position: relative;
+    margin-top: 20px;
+    width: 171px;
+    height: 35px;
+    border-radius: 70px;
+    
+background: linear-gradient(168deg, rgba(255,255,255,0) 25%, rgba(255,255,255,0.6362920168067228) 64%, rgba(255,255,255,1) 89%);
+
+}
+
+.bunner-btn-border2 {
+    position: absolute;
+    z-index: 2;
+ margin-top: 1px;
+    width: 170px;
+    height: 33px;
+    border-radius: 70px;
+    background-color: $primaryBgColors;
+}
+
 .bunner-button {
-    box-sizing: border-box;
-  margin-top: 20px;
+    margin-top: -1px;
+    position: absolute;
+    z-index: 3;
+  box-sizing: border-box;
   width: 170px;
   height: 35px;
-
 
   background: radial-gradient(
     681.23% 138.89% at 50% 48.89%,
@@ -29,10 +51,28 @@
     #ffffff 100%
   );
 
- 
-  border: 1px solid;
-
-  border-image-source: radial-gradient(100% 100% at 70.33% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  border: none;
   border-radius: 70px;
   @include font($primary-font, 400, 16px, calc(16 / 16), $secondaryTextColors);
 }
+
+.bunner-button:hover {
+    background: radial-gradient(735.73% 150% at 50% 120%, rgba(213, 233, 245, 0.2) 8.12%, #FFFFFF 100%);
+}
+
+.banner-human-image {
+    width: 320px;
+    height: 380px;
+position: relative;
+}
+
+.banner-human-image::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30%; /* Выберите нужную высоту для прозрачной области */
+    background-image: linear-gradient(180deg, rgba(255,255,255,0) 39%, rgba(6,36,54,1) 96%);
+
+  }
