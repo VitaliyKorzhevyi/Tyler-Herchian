@@ -1,0 +1,38 @@
+.banner {
+  margin-top: 80px;
+}
+
+.banner-title {
+  @include font($secondary-font, 400, 70px, calc(87 / 70), $primaryTextColors);
+}
+
+.banner-text {
+  margin-top: 20px;
+
+  @include font($primary-font, 400, 24px, calc(24 / 24), $primaryTextColors);
+
+  &__accent {
+    color: $accentTextColors;
+  }
+}
+
+.bunner-button {
+    box-sizing: border-box;
+  margin-top: 20px;
+  width: 170px;
+  height: 35px;
+
+
+  background: radial-gradient(
+    681.23% 138.89% at 50% 48.89%,
+    rgba(213, 233, 245, 0.2) 8.12%,
+    #ffffff 100%
+  );
+
+ 
+  border: 1px solid;
+
+  border-image-source: radial-gradient(100% 100% at 70.33% 100%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 70px;
+  @include font($primary-font, 400, 16px, calc(16 / 16), $secondaryTextColors);
+}

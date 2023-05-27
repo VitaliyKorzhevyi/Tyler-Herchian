@@ -146,7 +146,8 @@
   }
 }
 
-// Блюр
+// TODO Блюр (проблема с отображением на iphone 8)
+
 .blur-effect1 {
   position: absolute;
   width: 237px;
@@ -178,7 +179,6 @@
   gap: 40px;
 
   &__item-menu {
-    color: $secondaryTextColors;
     @include font(
       $primary-font,
       400,
