@@ -21,7 +21,6 @@
 }
 
 .bunner-btn-border1 {
-  // position: relative;
   margin-top: 20px;
   width: 171px;
   height: 35px;
@@ -74,25 +73,10 @@
 
 .banner-human-image {
   margin: 50px auto;
-  width: 320px;
-  height: 348px;
+  width: 310px;
+  // height: 348px;
   position: relative;
   z-index: 1;
-}
-
-.banner-human-image::after {
-  content: '';
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 36%; /* Выберите нужную высоту для прозрачной области */
-  background-image: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 7%,
-    rgb(8, 44, 66) 97%
-  );
 }
 
 // TODO Блюр (проблема с отображением на iphone 8)
