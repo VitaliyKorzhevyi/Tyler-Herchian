@@ -3,10 +3,14 @@
 }
 
 .banner-title {
+  position: relative;
+  z-index: 1;
   @include font($secondary-font, 400, 70px, calc(87 / 70), $primaryTextColors);
 }
 
 .banner-text {
+  position: relative;
+  z-index: 1;
   margin-top: 20px;
 
   @include font($primary-font, 400, 24px, calc(24 / 24), $primaryTextColors);
@@ -17,30 +21,34 @@
 }
 
 .bunner-btn-border1 {
-    // position: relative;
-    margin-top: 20px;
-    width: 171px;
-    height: 35px;
-    border-radius: 70px;
-    
-background: linear-gradient(168deg, rgba(255,255,255,0) 25%, rgba(255,255,255,0.6362920168067228) 64%, rgba(255,255,255,1) 89%);
+  // position: relative;
+  margin-top: 20px;
+  width: 171px;
+  height: 35px;
+  border-radius: 70px;
 
+  background: linear-gradient(
+    168deg,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(255, 255, 255, 0.6362920168067228) 64%,
+    rgba(255, 255, 255, 1) 89%
+  );
 }
 
 .bunner-btn-border2 {
-    position: absolute;
-    z-index: 2;
- margin-top: 1px;
-    width: 170px;
-    height: 33px;
-    border-radius: 70px;
-    background-color: $primaryBgColors;
+  position: absolute;
+  z-index: 2;
+  margin-top: 1px;
+  width: 170px;
+  height: 33px;
+  border-radius: 70px;
+  background-color: $primaryBgColors;
 }
 
 .bunner-button {
-    margin-top: -1px;
-    position: absolute;
-    z-index: 3;
+  margin-top: -1px;
+  position: absolute;
+  z-index: 3;
   box-sizing: border-box;
   width: 170px;
   height: 35px;
@@ -57,22 +65,79 @@ background: linear-gradient(168deg, rgba(255,255,255,0) 25%, rgba(255,255,255,0.
 }
 
 .bunner-button:hover {
-    background: radial-gradient(735.73% 150% at 50% 120%, rgba(213, 233, 245, 0.2) 8.12%, #FFFFFF 100%);
+  background: radial-gradient(
+    735.73% 150% at 50% 120%,
+    rgba(213, 233, 245, 0.2) 8.12%,
+    #ffffff 100%
+  );
 }
 
 .banner-human-image {
-    width: 320px;
-    height: 380px;
-position: relative;
+  margin: 50px auto;
+  width: 320px;
+  height: 348px;
+  position: relative;
 }
 
 .banner-human-image::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 30%; /* Выберите нужную высоту для прозрачной области */
-    background-image: linear-gradient(180deg, rgba(255,255,255,0) 39%, rgba(6,36,54,1) 96%);
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 36%; /* Выберите нужную высоту для прозрачной области */
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 7%,
+    rgb(6, 36, 54) 97%
+  );
+}
 
+// TODO Блюр (проблема с отображением на iphone 8)
+.blur-effect3 {
+  position: absolute;
+  width: 237px;
+  height: 165px;
+  left: -95px;
+  top: 157px;
+
+  background: #52ffff;
+  -webkit-filter: blur(286px);
+  filter: blur(286px);
+}
+
+.blur-effect4 {
+  position: absolute;
+  width: 256px;
+  height: 241px;
+  left: 111px;
+  top: 535px;
+
+  background: #43a5ff;
+  -webkit-filter: blur(286px);
+  filter: blur(400px);
+}
+
+
+// experience list
+.banner-list {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.banner-item {
+  color: $primaryTextColors;
+
+  &__value {
+    height: 70px;
+    margin-bottom: 10px;
+
+    @include font($primary-font, 400, 70px, calc(70 / 70));
   }
+
+  &__text{
+    @include font($primary-font, 400, 20px, calc(24 / 20));
+  }
+}

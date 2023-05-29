@@ -1,0 +1,60 @@
+.services {
+  margin-top: 80px;
+}
+
+.services h2 {
+  text-align: center;
+  @include font($secondary-font, 400, 40px, calc(50 / 40), $primaryTextColors);
+
+  span {
+    color: $accentTextColors;
+  }
+}
+
+.services-list {
+  margin-top: 40px;
+  display: flex;
+  overflow-x: auto;
+  gap: 30px;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  img {
+    min-width: 270px;
+    height: 234px;
+  }
+  li {
+    &:nth-child(4) {
+      margin-right: 75px;
+    }
+  }
+}
+
+.blur-effect5 {
+  position: absolute;
+  width: 270px;
+  height: 240px;
+  left: -157px;
+  top: 1479px;
+
+  background: #43a5ff;
+  filter: blur(265px);
+}
+
+// lines
+.services-lines {
+  position: absolute;
+  width: 300px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+
+  span {
+    background-color: $secondaryBgColors;
+    width: 65px;
+    height: 1px;
+    transition: height 0.4s ease;
+  }
+}
