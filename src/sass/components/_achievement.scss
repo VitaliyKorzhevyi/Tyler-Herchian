@@ -10,7 +10,7 @@
       400,
       40px,
       calc(56 / 40),
-      $secondaryTextColors
+      $primaryTextColors
     );
 
     span {
@@ -27,11 +27,81 @@
 
 .blur-effect7 {
   position: relative;
-  top: -200px;
+  top: -380px;
   width: 315px;
   height: 219px;
   left: -32px;
 
   background: rgba(82, 255, 255, 0.5);
   filter: blur(286px);
+}
+
+.achievement-list {
+  position: relative;
+  top: -160px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+
+  &__value {
+    position: absolute;
+    @include font(
+      $primary-font,
+      400,
+      115px,
+      calc(115 / 115),
+      $transparentTextColors
+    );
+  }
+
+  &__text {
+    width: 310px;
+    @include font($primary-font, 400, 20px, calc(24 / 20), $primaryTextColors);
+  }
+
+  .text1 {
+    padding-left: 18px;
+    width: 326px;
+  }
+
+  .value1 {
+    top: -24px;
+  }
+
+  .text2 {
+    padding-left: 26px;
+    width: 340px;
+  }
+
+  .value2 {
+    left: -1px;
+    top: 116px;
+  }
+
+  .text3 {
+    padding-left: 31px;
+    width: 340px;
+  }
+
+  .value3 {
+    top: 256px;
+  }
+}
+
+.humanity-list {
+  position: relative;
+  top: -60px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  text-align: center;
+  p {
+    @include font(
+      $secondary-font,
+      400,
+      40px,
+      calc(24 / 40),
+      $transparentTextColors
+    );
+  }
 }
