@@ -1,0 +1,80 @@
+.about {
+  margin-top: 84px;
+
+  h2 {
+    position: relative;
+    @include font(
+      $secondary-font,
+      400,
+      40px,
+      calc(50 / 40),
+      $primaryTextColors
+    );
+  }
+
+  p {
+    @include font($primary-font, 400, 20px, calc(24 / 20), $primaryTextColors);
+  }
+
+  img {
+    position: relative;
+    z-index: 1;
+    margin-top: 40px;
+  }
+}
+
+.about-text-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 40px 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+// learn more
+.learn-more-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 0px;
+  margin-bottom: 0px;
+
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+
+  transition: max-height 1s ease, margin-bottom 1s ease;
+}
+
+.read-more-cheacker {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+}
+
+.read-more-button {
+  position: absolute;
+  z-index: 2;
+  right: 15px;
+  cursor: pointer;
+
+  @include font($primary-font, 400, 16px, calc(16 / 16), $secondaryTextColors);
+  text-decoration-line: underline;
+}
+
+.read-more-cheacker:checked ~ .learn-more-text {
+  max-height: 520px;
+  margin-bottom: 12px;
+}
+
+.blur-effect6 {
+  position: absolute;
+  width: 306px;
+  height: 290px;
+  left: 117px;
+  top: 2144px;
+
+  background: #43a5ff;
+  filter: blur(265px);
+}

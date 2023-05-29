@@ -1,0 +1,37 @@
+.achievement {
+  margin-top: 80px;
+
+  h3 {
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    @include font(
+      $secondary-font,
+      400,
+      40px,
+      calc(56 / 40),
+      $secondaryTextColors
+    );
+
+    span {
+      @include font(
+        $secondary-font,
+        400,
+        28px,
+        calc(52 / 28),
+        $accentTextColors
+      );
+    }
+  }
+}
+
+.blur-effect7 {
+  position: relative;
+  top: -200px;
+  width: 315px;
+  height: 219px;
+  left: -32px;
+
+  background: rgba(82, 255, 255, 0.5);
+  filter: blur(286px);
+}
