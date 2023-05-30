@@ -93,13 +93,9 @@
     }
   }
   #cross {
-    // position: fixed;
     z-index: 18;
     height: 40px;
     width: 40px;
-    // overflow: hidden;
-    // display: none;
-    // transition: display 250ms linear;
     
     span {
       background-color: #ffffff;
@@ -141,8 +137,7 @@
     }
   }
   #cross {
-    display: inherit;
-    position: fixed;
+
     z-index: 18;
     span {
       &:nth-child(1) {
