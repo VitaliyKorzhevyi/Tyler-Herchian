@@ -42,3 +42,9 @@ function updateLinesHeight() {
   });
 }
   
+window.matchMedia('(min-width: 320px)').addEventListener('change', e => {
+  if (!e.matches) return;
+  mobileMenu.classList.remove('is-open');
+  openMenuBtn.setAttribute('aria-expanded', false);
+  bodyScrollLock.classList.remove('no-scroll');
+});
