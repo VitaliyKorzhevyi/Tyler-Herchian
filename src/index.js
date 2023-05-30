@@ -8,7 +8,6 @@ function onBtnToggleClass() {
     menuToggle.classList.toggle('open');
     mobileMenu.classList.toggle('is-open');
     bodyScrollLock.classList.toggle('no-scroll');
-    console.log("closes");
 }
 
 
