@@ -1,6 +1,6 @@
 .achievement {
   // margin-top: 80px;
-  margin: 80px auto 0;
+  margin: 76px auto 0;
 
   h3 {
     text-transform: uppercase;
@@ -35,13 +35,13 @@
   height: 219px;
   left: -32px;
 
-  background: rgba(82, 255, 255, 0.5);
+  background: rgba(82, 255, 255, 0.7);
   filter: blur(286px);
 }
 
 .achievement-list {
   position: relative;
-  margin: 40px auto 40px;
+  margin: 8px auto 0px;
 
   top: -160px;
   display: flex;
@@ -96,7 +96,7 @@
 
 .humanity-list {
   position: relative;
-  top: -60px;
+  top: -82px;
   display: flex;
   flex-direction: column;
   gap: 42px;
