@@ -1,0 +1,48 @@
+.companies {
+  background-color: $secondaryBgColors;
+  margin: 20px auto 0 auto;
+  padding: 40px 15px;
+  h2 {
+    text-align: center;
+    @include font(
+      $secondary-font,
+      400,
+      40px,
+      calc(50 / 40),
+      $companiesTextColors
+    );
+  }
+
+  p {
+    margin-top: 30px;
+    @include font(
+      $primary-font,
+      400,
+      14px,
+      calc(24 / 14),
+      $companiesTextColors
+    );
+  }
+}
+
+.companies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+  align-items: center;
+
+  li {
+    &:nth-child(1) {
+      width: 240px;
+    }
+
+    &:nth-child(2) {
+      width: 237px;
+    }
+
+    &:nth-child(3) {
+      width: 122px;
+    }
+  }
+}
