@@ -28,14 +28,13 @@
 
 // backdrop-menu
 .backdrop-menu {
-  display: none;
+  // overflow-x: 0;
   position: absolute;
-  width: 100%;
+  width: 0%;
   z-index: 9;
 
   top: 0px;
-  left: 0px;
-
+  right: 0px;
   transform: translateX(109%);
   overflow: hidden;
 
@@ -45,11 +44,13 @@
 
   background-color: $primaryBgColors;
 
-  transition: transform 250ms linear,
+  transition: width 250ms linear,
   visibility 250ms linear,
-  opacity 150ms linear;
+  opacity 150ms linear,
+  transform 250ms linear;
 
   &.is-open {
+    width: 100%;
     transform: translateX(0);
     pointer-events: initial;
     visibility: visible;
