@@ -11,6 +11,7 @@
 
 .header {
   padding: 20px 15px 0;
+  overflow-x: hidden;
 }
 
 #menu-toggle span {
@@ -28,13 +29,13 @@
 
 // backdrop-menu
 .backdrop-menu {
-  // overflow-x: 0;
+  
   position: absolute;
-  width: 0%;
+  width: 100%;
   z-index: 9;
-
+  overflow-x: hidden;
   top: 0px;
-  right: 0px;
+  left: 0px;
   transform: translateX(109%);
   overflow: hidden;
 
@@ -44,10 +45,10 @@
 
   background-color: $primaryBgColors;
 
-  transition: width 250ms linear,
-  visibility 250ms linear,
-  opacity 150ms linear,
-  transform 250ms linear;
+  transition: 
+  visibility 150ms ease-in,
+  opacity 100ms ease-in,
+  transform 250ms ease-in;
 
   &.is-open {
     width: 100%;
