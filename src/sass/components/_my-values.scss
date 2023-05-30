@@ -17,9 +17,9 @@
     }
   }
 
-  img{
-    width: 345px;
-    margin: 0 auto;
+  img {
+    width: 100%;
+    margin: 0 auto 80px;
   }
 }
 
@@ -43,6 +43,33 @@
     text-align: center;
     @include font($primary-font, 400, 20px, calc(28 / 20), $primaryTextColors);
   }
+  .text1 {
+    margin: 0 auto;
+    width: 265px;
+  }
+
+  .text2 {
+    margin: 0 auto;
+    width: 296px;
+  }
+
+  .text3 {
+    margin: 0 auto;
+    width: 265px;
+  }
+}
+
+.my-values-text {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto 20px;
+  width: 345px;
+  @include font($primary-font, 300, 20px, calc(40 / 20), $primaryTextColors);
+}
+
+.my-values-text-author {
+    text-align: center;
+    @include font($secondary-font, 400, 16px, calc(24 / 16), $primaryTextColors);
 }
 
 // .my-mission {
@@ -54,7 +81,6 @@
 //   border-radius: 15px;
 //   backdrop-filter: blur(35px);
 //   background-blend-mode: soft-light;
-
 
 //   p {
 //     height: 198px;

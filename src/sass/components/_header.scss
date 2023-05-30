@@ -28,7 +28,7 @@
 
 // backdrop-menu
 .backdrop-menu {
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 9;
 
@@ -93,10 +93,13 @@
     }
   }
   #cross {
-    position: absolute;
+    position: fixed;
     z-index: 18;
-    height: 100%;
-    width: 100%;
+    height: 40px;
+    width: 40px;
+    // overflow: hidden;
+    // display: none;
+    // transition: display 250ms linear;
     
     span {
       background-color: #ffffff;
@@ -138,6 +141,9 @@
     }
   }
   #cross {
+    display: inherit;
+    position: fixed;
+    z-index: 18;
     span {
       &:nth-child(1) {
         height: 140%;

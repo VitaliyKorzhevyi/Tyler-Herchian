@@ -1,3 +1,79 @@
-<section>
-  <p>contact</p>
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+
+  <p class="contact__text">
+    Thank you for visiting my website, and please do not hesitate to contact me
+    if you have any questions or would like to learn more about my work.
+  </p>
+
+  <div class="contact-form">
+    <div class="form-item">
+      <label for="forName"></label>
+      <input
+        id="forName"
+        type="text"
+        name="name"
+        placeholder="Name"
+        class="form-input"
+      />
+    </div>
+
+    <div class="form-item">
+      <label for="forEmail"></label>
+      <input
+        id="forEmail"
+        type="email"
+        name="email"
+        placeholder="Email"
+        class="form-input"
+      />
+    </div>
+
+    <div class="form-item">
+      <label for="formMessage"></label>
+      <textarea
+        id="formMessage"
+        type="text"
+        name="message"
+        placeholder="Our question"
+        class="form-input"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <div class="contact-btn-border1">
+      <div class="contact-btn-border2">
+        <button type="button" class="contact-button">submit</button>
+      </div>
+    </div>
+  </div>
+
+  <img src="images/contact-photo.png" alt="Tyler Herchian" />
+
+  <ul class="communication-list">
+    <li>
+
+      <a
+        class="contact__link"
+        href="tel:2623257724"
+      >
+        <svg width="25" height="25">
+          <use href="images/symbol-defs.svg#icon-phone-contact"></use>
+        </svg>
+        <p>(262) 325 - 7724</p>
+      </a>
+    </li>
+
+    <li>
+      <a
+        class="contact__link"
+        href="mailto:herchian@tylerherchian.com"
+      >
+        <svg class="contact-icon-mail" width="25" height="25">
+          <use href="images/symbol-defs.svg#icon-mail-contact"></use>
+        </svg>
+        <p>herchian@tylerherchian.com</p>
+      </a>
+    </li>
+  </ul>
 </section>
