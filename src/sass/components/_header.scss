@@ -4,32 +4,106 @@
   transition: 0.14s ease-in-out;
 }
 
+.header {
+  @include breakpoint(tablet) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 21px 15px 21px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(mobile-max) {
+    padding: 20px 15px 0;
+  }
+}
+
 .logo {
+  width: 137px;
+  @include breakpoint(mobile-max) {
+    display: none;
+  }
+}
+
+.logo-mobile {
   position: relative;
   z-index: 2;
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
-.header {
-  padding: 20px 15px 0;
-  overflow-x: hidden;
+// Elements menu
+.list-menu {
+  display: flex;
+  gap: 50px;
+  margin-right: 28px;
+  @include breakpoint(mobile-max) {
+    display: none;
+  }
+  &__item-menu {
+    @include font(
+      $primary-font,
+      400,
+      16px,
+      calc(16 / 16),
+      $secondaryTextColors
+    );
+  }
 }
 
+// icons-soc
+.list-soc {
+  display: flex;
+  gap: 15px;
+
+  @include breakpoint(mobile-max) {
+    display: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+    background-color: #d5e9f5;
+  }
+}
+
+.soc-icon {
+  fill: #d5e9f5;
+  stroke: #031825;
+}
+
+//*    -------------------- MOBILE MENU --------------------
 #menu-toggle span {
   display: block;
   background: $linesColors;
   border-radius: 2px;
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 .mobile-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
-
 
 // backdrop-menu
 .backdrop-menu {
-  
+  @include breakpoint(tablet) {
+    display: none;
+  }
   position: absolute;
   width: 100%;
   z-index: 9;
@@ -45,10 +119,8 @@
 
   background-color: $primaryBgColors;
 
-  transition: 
-  visibility 350ms linear,
-  opacity 350ms linear,
-  transform 350ms linear;
+  transition: visibility 350ms linear, opacity 350ms linear,
+    transform 350ms linear;
 
   &.is-open {
     width: 100%;
@@ -99,7 +171,7 @@
     z-index: 18;
     height: 40px;
     width: 40px;
-    
+
     span {
       background-color: #ffffff;
       &:nth-child(1) {
@@ -140,7 +212,6 @@
     }
   }
   #cross {
-
     z-index: 18;
     span {
       &:nth-child(1) {
@@ -159,7 +230,6 @@
   }
 }
 
-
 // TODO Блюр (проблема с отображением на iphone 8)
 .blur-effect1 {
   position: relative;
@@ -172,6 +242,10 @@
   background: #52ffff;
   // -webkit-filter: blur(286px);
   filter: blur(286px);
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 .blur-effect2 {
@@ -184,14 +258,15 @@
 
   background: rgb(66, 164, 255);
   filter: blur(400px);
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
-
-// Elements menu
-.list-menu {
+.list-menu-mobile {
   position: relative;
   z-index: 13;
-  // left: -4%;
   top: -300px;
   display: flex;
   flex-direction: column;
@@ -209,9 +284,8 @@
   }
 }
 
-
 // icons-soc
-.list-soc {
+.list-soc-mobile {
   position: relative;
   z-index: 13;
   top: -300px;
@@ -224,18 +298,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  
+
     width: 38px;
     height: 38px;
-  
+
     border-radius: 50%;
     background-color: #d5e9f5;
   }
-}
-
-.soc-icon {
-  fill: #d5e9f5;
-  stroke: #031825;
 }
 
 // human-image

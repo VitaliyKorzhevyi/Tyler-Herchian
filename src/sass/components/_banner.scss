@@ -1,20 +1,70 @@
 .banner {
-  margin-top: 80px;
-  height: 1190px;
+  @include breakpoint(tablet) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px 75px;
+    display: flex;
+    flex-direction: column;
+  }
+  @include breakpoint(mobile-max) {
+    margin-top: 80px;
+    height: 1190px;
+  }
+}
+
+.banner-desktop {
+  @include breakpoint(tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.banner-info {
+  @include breakpoint(tablet) {
+    padding: 38px 0 0;
+    margin-right: 34px;
+    max-width: 594px;
+  }
 }
 
 .banner-title {
   position: relative;
   z-index: 1;
-  @include font($secondary-font, 400, 70px, calc(87 / 70), $primaryTextColors);
+  @include breakpoint(tablet) {
+    width: 100%;
+    @include font(
+      $secondary-font,
+      400,
+      125px,
+      calc(155 / 125),
+      $primaryTextColors
+    );
+  }
+  @include breakpoint(mobile-max) {
+    @include font(
+      $secondary-font,
+      400,
+      70px,
+      calc(87 / 70),
+      $primaryTextColors
+    );
+  }
 }
 
 .banner-text {
   position: relative;
   z-index: 1;
-  margin-top: 20px;
 
-  @include font($primary-font, 400, 24px, calc(24 / 24), $primaryTextColors);
+  @include breakpoint(tablet) {
+    max-width: 448px;
+    margin-top: 30px;
+    @include font($primary-font, 400, 32px, calc(32 / 32), $primaryTextColors);
+  }
+
+  @include breakpoint(mobile-max) {
+    margin-top: 20px;
+    @include font($primary-font, 400, 24px, calc(24 / 24), $primaryTextColors);
+  }
 
   &__accent {
     color: $accentTextColors;
@@ -22,11 +72,17 @@
 }
 
 .bunner-btn-border1 {
-  margin-top: 20px;
+  margin-top: 40px;
   width: 171px;
-  height: 35px;
   border-radius: 70px;
 
+  @include breakpoint(tablet) {
+    height: 40px;
+  }
+
+  @include breakpoint(mobile-max) {
+    height: 35px;
+  }
   background: linear-gradient(
     168deg,
     rgba(255, 255, 255, 0) 25%,
@@ -40,7 +96,14 @@
   z-index: 2;
   margin-top: 1px;
   width: 170px;
-  height: 33px;
+
+  @include breakpoint(tablet) {
+    height: 38px;
+  }
+
+  @include breakpoint(mobile-max) {
+    height: 33px;
+  }
   border-radius: 70px;
   background-color: $primaryBgColors;
 }
@@ -52,6 +115,13 @@
   box-sizing: border-box;
   width: 170px;
   height: 35px;
+  @include breakpoint(tablet) {
+    height: 40px;
+  }
+
+  @include breakpoint(mobile-max) {
+    height: 35px;
+  }
 
   background: radial-gradient(
     681.23% 138.89% at 50% 48.89%,
@@ -73,11 +143,26 @@
 }
 
 .banner-human-image {
+  padding-right: 40px;
+  @include breakpoint(mobile-max) {
+    display: none;
+  }
+
+  img {
+    max-width: 484px;
+  }
+}
+
+//* ------------------- MOBILE -------------------
+
+.banner-human-image-mobile {
   margin: 50px auto;
   width: 310px;
-  // height: 348px;
   position: relative;
   z-index: 1;
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 // TODO Блюр (проблема с отображением на iphone 8)
@@ -91,6 +176,9 @@
   background: hsla(180, 100%, 66%);
   -webkit-filter: blur(286px);
   filter: blur(286px);
+    @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 .blur-effect4 {
@@ -103,28 +191,73 @@
   background: #43a5ff;
   -webkit-filter: blur(286px);
   filter: blur(400px);
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
-
 
 // experience list
 .banner-list {
   display: flex;
-  text-align: center;
-  flex-direction: column;
-  gap: 40px;
+  @include breakpoint(tablet) { 
+    margin-top: 100px;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 60px;
+  }
+  @include breakpoint(mobile-max) {
+    text-align: center;
+    flex-direction: column;
+    gap: 40px;
+  }
+  li {
+    @include breakpoint(tablet) {
+          &:nth-child(1) {
+      height: 170px;
+      width: 257px;
+    }
+    &:nth-child(2) {
+      height: 170px;
+      width: 272px;
+    }
+    &:nth-child(3) {
+      height: 150px;
+      width: 305px;
+      margin-bottom: 20px;
+    }
+    }
+
+  }
 }
 
 .banner-item {
   color: $primaryTextColors;
 
   &__value {
-    height: 70px;
-    margin-bottom: 10px;
+    @include breakpoint(tablet) {
+      height: 115px;
+      margin-bottom: 15px;
+      text-align: center;
+      @include font($primary-font, 400, 115px, calc(115 / 115));
+    }
 
-    @include font($primary-font, 400, 70px, calc(70 / 70));
+    @include breakpoint(mobile-max) {
+      height: 70px;
+      margin-bottom: 10px;
+
+      @include font($primary-font, 400, 70px, calc(70 / 70));
+    }
   }
 
-  &__text{
-    @include font($primary-font, 400, 20px, calc(24 / 20));
+  &__text {
+    @include breakpoint(tablet) {
+      text-align: center;
+      @include font($primary-font, 400, 20px, calc(20 / 20));
+    }
+
+    @include breakpoint(mobile-max) {
+      @include font($primary-font, 400, 20px, calc(24 / 20));
+    }
   }
 }
+
