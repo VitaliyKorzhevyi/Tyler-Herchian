@@ -3,6 +3,8 @@
 }
 
 .services h2 {
+  position: relative;
+  z-index: 1;
   text-align: center;
   @include font($secondary-font, 400, 40px, calc(50 / 40), $primaryTextColors);
 

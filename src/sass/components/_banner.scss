@@ -1,5 +1,6 @@
 .banner {
   margin-top: 80px;
+  height: 1190px;
 }
 
 .banner-title {
@@ -81,11 +82,11 @@
 
 // TODO Блюр (проблема с отображением на iphone 8)
 .blur-effect3 {
-  position: absolute;
+  position: relative;
   width: 227px;
   height: 165px;
   left: -80px;
-  top: 157px;
+  top: -1160px;
 
   background: hsla(180, 100%, 66%);
   -webkit-filter: blur(286px);
@@ -93,11 +94,11 @@
 }
 
 .blur-effect4 {
-  position: absolute;
+  position: relative;
   width: 246px;
   height: 241px;
-  left: 111px;
-  top: 535px;
+  left: 100px;
+  top: -970px;
 
   background: #43a5ff;
   -webkit-filter: blur(286px);

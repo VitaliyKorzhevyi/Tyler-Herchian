@@ -163,6 +163,7 @@
 // TODO Блюр (проблема с отображением на iphone 8)
 .blur-effect1 {
   position: relative;
+  z-index: 12;
   width: 237px;
   height: 165px;
   left: -28px;
@@ -175,6 +176,7 @@
 
 .blur-effect2 {
   position: relative;
+  z-index: 12;
   width: 256px;
   height: 241px;
   left: 100px;
@@ -188,7 +190,7 @@
 // Elements menu
 .list-menu {
   position: relative;
-  z-index: 1;
+  z-index: 13;
   // left: -4%;
   top: -300px;
   display: flex;
@@ -211,7 +213,7 @@
 // icons-soc
 .list-soc {
   position: relative;
-  z-index: 1;
+  z-index: 13;
   top: -300px;
   display: flex;
   justify-content: center;
@@ -240,7 +242,7 @@
 
 .human-image {
   position: relative;
-  z-index: 2;
+  z-index: 13;
   top: -300px;
   margin: 0 auto;
   max-width: 280px;
