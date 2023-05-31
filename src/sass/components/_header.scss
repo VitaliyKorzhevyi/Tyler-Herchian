@@ -162,26 +162,25 @@
 
 // TODO Блюр (проблема с отображением на iphone 8)
 .blur-effect1 {
-  position: absolute;
+  position: relative;
   width: 237px;
   height: 165px;
   left: -28px;
-  top: 127px;
+  top: 80px;
 
-  background: #52ffffd5;
-  -webkit-filter: blur(286px);
+  background: #52ffff;
+  // -webkit-filter: blur(286px);
   filter: blur(286px);
 }
 
 .blur-effect2 {
-  position: absolute;
+  position: relative;
   width: 256px;
   height: 241px;
-  left: 64px;
-  top: 517px;
+  left: 100px;
+  top: 300px;
 
   background: rgb(66, 164, 255);
-  -webkit-filter: blur(286px);
   filter: blur(400px);
 }
 
@@ -191,7 +190,7 @@
   position: relative;
   z-index: 1;
   // left: -4%;
-  margin-top: 100px;
+  top: -300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -213,7 +212,7 @@
 .list-soc {
   position: relative;
   z-index: 1;
-  // left: -4%;
+  top: -300px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -242,7 +241,7 @@
 .human-image {
   position: relative;
   z-index: 2;
-  // left: -4%;
+  top: -300px;
   margin: 0 auto;
   max-width: 280px;
   height: 300px;
