@@ -1,7 +1,10 @@
 .my-values {
   padding: 80px 15px;
+  height: 1650px;
 
   h2 {
+    position: relative;
+    z-index: 1;
     text-align: center;
     text-transform: uppercase;
     @include font(
@@ -18,15 +21,24 @@
   }
 
   img {
+    position: relative;
+    z-index: 1;
     width: 100%;
     margin: 0 auto 80px;
   }
 }
 
+.my-mission {
+  top: -260px;
+}
+
 .my-values-list {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   padding-bottom: 60px;
+  top: -260px;
   margin: 0 auto;
   img {
     width: 50px;
@@ -60,20 +72,43 @@
 }
 
 .my-values-text {
+  position: relative;
+  top: -546px;
   text-transform: uppercase;
   text-align: center;
   margin: 0 auto 20px;
-  width: 345px;
+  max-width: 345px;
   @include font($primary-font, 300, 20px, calc(40 / 20), $primaryTextColors);
 }
 
 .my-values-text-author {
-    text-align: center;
-    @include font($secondary-font, 400, 16px, calc(24 / 16), $primaryTextColors);
+  position: relative;
+  top: -546px;
+  text-align: center;
+  @include font($secondary-font, 400, 16px, calc(24 / 16), $primaryTextColors);
 }
 
+.blur-effect8 {
+  position: relative;
+  top: 30px;
+  width: 316px;
+  height: 252px;
+  left: 12px;
 
+  background: #52ffff;
+  filter: blur(286px);
+}
 
+.blur-effect9 {
+  position: relative;
+  width: 219px;
+  height: 283px;
+  left: 120px;
+  top: -404px;
+
+  background: #43a4ff;
+  filter: blur(265px);
+}
 
 // .my-mission {
 //   position: relative;

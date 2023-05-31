@@ -1,7 +1,10 @@
 .contact {
   margin-bottom: 80px;
+  height: 920px;
 
   h2 {
+    position: relative;
+    z-index: 1;
     text-align: center;
     margin-bottom: 40px;
 
@@ -15,17 +18,36 @@
   }
 
   &__text {
+    position: relative;
+    z-index: 1;
     margin: 0 auto 30px;
     @include font($primary-font, 400, 20px, calc(20 / 20), $primaryTextColors);
   }
 
   img {
+    position: relative;
+    z-index: 1;
+    top: -280px;
     margin: 60px auto 0;
     width: 100%;
   }
 }
 
+.blur-effect10 {
+  position: relative;
+  width: 270px;
+  height: 275px;
+  left: 75px;
+  top: -12px;
+
+  background: #52ffffe3;
+  filter: blur(286px);
+}
+
 .contact-form {
+  position: relative;
+  z-index: 1;
+  top: -280px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -115,6 +137,8 @@
 }
 
 .communication-list {
+  position: relative;
+  top: -280px;
   display: flex;
   flex-direction: column;
   gap: 20px;
