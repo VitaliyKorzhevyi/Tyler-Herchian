@@ -1,5 +1,6 @@
 .services {
   margin-top: 80px;
+  height: 354px;
 }
 
 .services h2 {
@@ -35,11 +36,11 @@
 }
 
 .blur-effect5 {
-  position: absolute;
+  position: relative;
   width: 270px;
   height: 240px;
   left: -157px;
-  top: 1479px;
+  top: -250px;
 
   background: #43a5ff;
   filter: blur(265px);
