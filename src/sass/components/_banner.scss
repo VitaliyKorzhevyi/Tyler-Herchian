@@ -175,6 +175,7 @@
 
   background: rgb(82, 255, 255);
   filter: blur(286px);
+  -webkit-filter: blur(286px);
   transform: translate3d(0, 0, 0);
     @include breakpoint(tablet) {
     display: none;
@@ -190,6 +191,7 @@
 
   background: #43a4ff;
   filter: blur(400px);
+  -webkit-filter: blur(400px);
   transform: translate3d(0, 0, 0);
   @include breakpoint(tablet) {
     display: none;
