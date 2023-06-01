@@ -170,10 +170,10 @@
   position: relative;
   width: 227px;
   height: 165px;
-  left: -80px;
+  left: -10px;
   top: -1160px;
 
-  background: hsla(180, 100%, 66%);
+  background: rgb(82, 255, 255);
   -webkit-filter: blur(286px);
   filter: blur(286px);
     @include breakpoint(tablet) {
@@ -183,12 +183,12 @@
 
 .blur-effect4 {
   position: relative;
-  width: 246px;
+  width: 256px;
   height: 241px;
-  left: 100px;
+  left: 70px;
   top: -970px;
 
-  background: #43a5ff;
+  background: #43a4ff;
   -webkit-filter: blur(286px);
   filter: blur(400px);
   @include breakpoint(tablet) {
