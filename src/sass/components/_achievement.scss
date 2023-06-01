@@ -1,30 +1,63 @@
 .achievement {
-  // margin-top: 80px;
-  margin: 76px auto 0;
+  @include breakpoint(tablet) {
+    max-width: 1200px;
+    margin: 215px auto 40px;
+    padding: 0 15px;
+    display: flex;
+  }
 
+  @include breakpoint(mobile-max) {
+    margin: 76px auto 0;
+  }
   h3 {
     text-transform: uppercase;
     position: relative;
-  margin: 0 auto;
-  width: 335px;
-    z-index: 1;
-    @include font(
-      $secondary-font,
-      400,
-      40px,
-      calc(56 / 40),
-      $primaryTextColors
-    );
 
-    span {
+    @include breakpoint(tablet) {
+      margin-top: 4px;
       @include font(
         $secondary-font,
         400,
-        28px,
-        calc(52 / 28),
-        $accentTextColors
+        50px,
+        calc(62 / 50),
+        $primaryTextColors
       );
     }
+
+    @include breakpoint(mobile-max) {
+      margin: 0 auto;
+      width: 335px;
+      z-index: 1;
+      @include font(
+        $secondary-font,
+        400,
+        40px,
+        calc(56 / 40),
+        $primaryTextColors
+      );
+    }
+
+    span {
+      @include breakpoint(tablet) {
+        color: $accentTextColors;
+      }
+
+      @include breakpoint(mobile-max) {
+        @include font(
+          $secondary-font,
+          400,
+          28px,
+          calc(52 / 28),
+          $accentTextColors
+        );
+      }
+    }
+  }
+}
+
+.achievement-container {
+  @include breakpoint(tablet) {
+    display: flex;
   }
 }
 
@@ -43,14 +76,36 @@
 
 .achievement-list {
   position: relative;
-  margin: 8px auto 0px;
-
-  top: -160px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 45px;
+  @include breakpoint(tablet) {
+    margin-bottom: 75px;
+  }
+  @include breakpoint(mobile-max) {
+    top: -160px;
+    margin: 8px auto 0px;
+    gap: 45px;
+  }
+  @include breakpoint(tablet) {
+    li {
+      // position: relative;
+      &:nth-child(1) {
+        position: relative;
+        left: 24px;
+      }
 
+      &:nth-child(2) {
+        position: relative;
+        left: 38px;
+      }
+
+      &:nth-child(3) {
+        position: relative;
+        left: -10px;
+      }
+    }
+  }
   &__value {
     position: absolute;
     @include font(
@@ -63,40 +118,76 @@
   }
 
   &__text {
-    width: 310px;
     @include font($primary-font, 400, 20px, calc(24 / 20), $primaryTextColors);
   }
 
   .text1 {
-    padding-left: 18px;
-    width: 326px;
+    @include breakpoint(tablet) {
+      width: 459px;
+      padding-left: 19px;
+      margin-bottom: 66px;
+    }
+
+    @include breakpoint(mobile-max) {
+      width: 326px;
+      padding-left: 18px;
+    }
   }
 
   .value1 {
-    top: -24px;
+    @include breakpoint(tablet) {
+      top: -11px;
+    }
+    @include breakpoint(mobile-max) {
+      top: -24px;
+    }
   }
 
   .text2 {
-    padding-left: 26px;
-    width: 340px;
+    @include breakpoint(tablet) {
+      padding-left: 46px;
+      width: 538px;
+      margin-bottom: 84px;
+    }
+    @include breakpoint(mobile-max) {
+      padding-left: 26px;
+      width: 340px;
+    }
   }
 
   .value2 {
-    padding-left: -4px;
-    top: 116px;
+    @include breakpoint(tablet) {
+      padding-left: 5px;
+      top: -24px;
+    }
+    @include breakpoint(mobile-max) {
+      padding-left: -4px;
+      top: 116px;
+    }
   }
 
   .text3 {
-    padding-left: 31px;
-    width: 340px;
+    @include breakpoint(tablet) {
+      padding-left: 40px;
+      width: 431px;
+    }
+    @include breakpoint(mobile-max) {
+      padding-left: 31px;
+      width: 340px;
+    }
   }
 
   .value3 {
-    top: 256px;
+    @include breakpoint(tablet) {
+      top: -22px;
+    }
+    @include breakpoint(mobile-max) {
+      top: 256px;
+    }
   }
 }
 
-.humanity-list {
+.humanity-list-mobile {
   position: relative;
   top: -82px;
   display: flex;
@@ -111,5 +202,9 @@
       calc(24 / 40),
       $transparentTextColors
     );
+  }
+
+  @include breakpoint(tablet) {
+    display: none;
   }
 }

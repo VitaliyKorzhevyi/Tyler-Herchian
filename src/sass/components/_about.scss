@@ -2,7 +2,7 @@
   @include breakpoint(tablet) {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 0;
+    padding: 0 15px;
   }
 
   @include breakpoint(mobile-max) {
@@ -22,6 +22,76 @@
 
   p {
     @include font($primary-font, 400, 20px, calc(24 / 20), $primaryTextColors);
+  }
+}
+// desktop-version
+.about-container1 {
+  display: flex;
+  gap: 72px;
+  @include breakpoint(mobile-max) {
+    display: none;
+  }
+}
+
+.about-container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.about-container3 {
+  display: flex;
+justify-content: space-between;
+}
+
+.about-container4 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  h2 {
+    @include font(
+      $secondary-font,
+      400,
+      55px,
+      calc(68 / 55),
+      $primaryTextColors
+    );
+    margin-bottom: 10px;
+  }
+  p {
+    max-width: 411px;
+  }
+}
+
+.about-container5 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-down-text {
+  margin-top: 25px;
+    @include breakpoint(mobile-max) {
+    display: none;
+  }
+}
+
+.about-photo-desktop1 {
+  max-width: 398px;
+  height: 539px;
+  border-radius: 20px;
+}
+
+.about-photo-desktop2 {
+  max-width: 237px;
+  height: 309px;
+  border-radius: 20px;
+}
+
+// mobile-version
+.about-title-mobile {
+  @include breakpoint(tablet) {
+    display: none;
   }
 }
 
