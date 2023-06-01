@@ -240,7 +240,7 @@
   top: 80px;
 
   background: #52ffff;
-  filter: blur(286px);
+  filter: blur(256px);
 
   @include breakpoint(tablet) {
     display: none;
@@ -256,7 +256,7 @@
   top: 300px;
 
   background: rgb(66, 164, 255);
-  filter: blur(400px);
+  filter: blur(226px);
 
   @include breakpoint(tablet) {
     display: none;
