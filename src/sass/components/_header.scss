@@ -241,10 +241,6 @@
 
   background: #52ffff;
   filter: blur(256px);
-
-  @include breakpoint(tablet) {
-    display: none;
-  }
 }
 
 .blur-effect2 {
@@ -257,10 +253,6 @@
 
   background: rgb(66, 164, 255);
   filter: blur(226px);
-
-  @include breakpoint(tablet) {
-    display: none;
-  }
 }
 
 .list-menu-mobile {

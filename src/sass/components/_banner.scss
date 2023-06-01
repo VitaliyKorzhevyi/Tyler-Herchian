@@ -176,10 +176,6 @@
   background: rgba(82, 255, 255, 0.801);
   filter: blur(220px);
 
- 
-    @include breakpoint(tablet) {
-    display: none;
-  }
 }
 
 .blur-effect4 {
@@ -191,9 +187,7 @@
 
   background: #43a4ffde;
   filter: blur(226px);
-  @include breakpoint(tablet) {
-    display: none;
-  }
+
 }
 
 // experience list
