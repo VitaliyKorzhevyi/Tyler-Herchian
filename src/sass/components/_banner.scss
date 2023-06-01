@@ -175,7 +175,10 @@
 
   background: rgba(82, 255, 255, 0.801);
   filter: blur(220px);
-
+  
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 .blur-effect4 {
@@ -188,12 +191,15 @@
   background: #43a4ffde;
   filter: blur(226px);
 
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 // experience list
 .banner-list {
   display: flex;
-  @include breakpoint(tablet) { 
+  @include breakpoint(tablet) {
     margin-top: 100px;
     align-items: center;
     justify-content: space-evenly;
@@ -206,21 +212,20 @@
   }
   li {
     @include breakpoint(tablet) {
-          &:nth-child(1) {
-      height: 170px;
-      width: 257px;
+      &:nth-child(1) {
+        height: 170px;
+        width: 257px;
+      }
+      &:nth-child(2) {
+        height: 170px;
+        width: 272px;
+      }
+      &:nth-child(3) {
+        height: 150px;
+        width: 305px;
+        margin-bottom: 20px;
+      }
     }
-    &:nth-child(2) {
-      height: 170px;
-      width: 272px;
-    }
-    &:nth-child(3) {
-      height: 150px;
-      width: 305px;
-      margin-bottom: 20px;
-    }
-    }
-
   }
 }
 
@@ -254,4 +259,3 @@
     }
   }
 }
-

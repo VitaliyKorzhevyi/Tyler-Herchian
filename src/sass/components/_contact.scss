@@ -27,6 +27,7 @@
   img {
     position: relative;
     z-index: 1;
+    border-radius: 20px;
     top: -280px;
     margin: 60px auto 0;
     width: 345px;
@@ -39,7 +40,9 @@
   height: 275px;
   left: 75px;
   top: -12px;
-
+  @include breakpoint(tablet) {
+    display: none;
+  }
   background: #52ffffe3;
   filter: blur(286px);
 }

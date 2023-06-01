@@ -95,7 +95,9 @@
   width: 316px;
   height: 252px;
   left: 12px;
-
+  @include breakpoint(tablet) {
+    display: none;
+  }
   background: #52ffff;
   filter: blur(286px);
 }
@@ -106,7 +108,9 @@
   height: 283px;
   left: 120px;
   top: -404px;
-
+  @include breakpoint(tablet) {
+    display: none;
+  }
   background: #43a4ff;
   filter: blur(265px);
 }

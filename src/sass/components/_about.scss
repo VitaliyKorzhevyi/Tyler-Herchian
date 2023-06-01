@@ -1,5 +1,13 @@
 .about {
-  margin-top: 84px;
+  @include breakpoint(tablet) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+
+  @include breakpoint(mobile-max) {
+    margin-top: 84px;
+  }
 
   h2 {
     position: relative;
@@ -16,11 +24,17 @@
     @include font($primary-font, 400, 20px, calc(24 / 20), $primaryTextColors);
   }
 
-  img {
-    position: relative;
-    z-index: 1;
-    margin: -230px auto 0 auto;
-    width: 345px;
+}
+
+.about-photo-mobile {
+  position: relative;
+  z-index: 1;
+  margin: -230px auto 0 auto;
+  width: 345px;
+  border-radius: 20px;
+
+  @include breakpoint(tablet) {
+    display: none;
   }
 }
 
@@ -37,21 +51,27 @@
 .learn-more-text {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-height: 0px;
-  margin-bottom: 0px;
 
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-
-  transition: max-height 1s ease, margin-bottom 1s ease;
+  @include breakpoint(mobile-max) {
+    gap: 20px;
+    max-height: 0px;
+    margin-bottom: 0px;
+  
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  
+    transition: max-height 1s ease, margin-bottom 1s ease;
+  }
 }
 
 .read-more-cheacker {
   position: absolute;
   z-index: 2;
   opacity: 0;
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 .read-more-button {
@@ -62,11 +82,17 @@
 
   @include font($primary-font, 400, 16px, calc(16 / 16), $secondaryTextColors);
   text-decoration-line: underline;
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 .read-more-cheacker:checked ~ .learn-more-text {
   max-height: 520px;
   margin-bottom: 12px;
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 //TODO 
@@ -80,4 +106,8 @@
 
   background: rgb(67, 164, 255);
   filter: blur(265px);
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }

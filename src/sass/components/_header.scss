@@ -238,7 +238,9 @@
   height: 165px;
   left: 88px;
   top: 80px;
-
+  @include breakpoint(tablet) {
+    display: none;
+  }
   background: #52ffff;
   filter: blur(256px);
 }
@@ -250,7 +252,9 @@
   height: 241px;
   left: 50px;
   top: 300px;
-
+  @include breakpoint(tablet) {
+    display: none;
+  }
   background: rgb(66, 164, 255);
   filter: blur(226px);
 }
@@ -305,7 +309,8 @@
   z-index: 13;
   top: -300px;
   margin: 0 auto;
+  left: 6px;
   max-width: 280px;
   height: 300px;
-  bottom: 0px;
+
 }

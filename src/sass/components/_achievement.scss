@@ -34,7 +34,9 @@
   width: 315px;
   height: 219px;
   left: -32px;
-
+  @include breakpoint(tablet) {
+    display: none;
+  }
   background: rgba(82, 255, 255, 0.7);
   filter: blur(286px);
 }

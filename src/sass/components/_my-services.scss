@@ -1,42 +1,69 @@
 .services {
-  margin-top: 80px;
-  height: 354px;
+  @include breakpoint(tablet) {
+    max-width: 1200px;
+    margin: 75px auto;
+    padding: 0 15px;
+  }
+
+  @include breakpoint(mobile-max) {
+    margin-top: 90px;
+    height: 354px;
+  }
 }
 
 .services h2 {
   position: relative;
   z-index: 1;
   text-align: center;
-  @include font($secondary-font, 400, 40px, calc(50 / 40), $primaryTextColors);
 
+  @include breakpoint(tablet) {
+    @include font($secondary-font, 400, 55px, calc(68 / 55), $primaryTextColors);
+  }
+
+  @include breakpoint(mobile-max) {
+    @include font($secondary-font, 400, 40px, calc(50 / 40), $primaryTextColors);
+  }
+ 
   span {
     color: $accentTextColors;
   }
 }
 
 .services-list {
-  margin-top: 40px;
-  display: flex;
-  overflow-x: auto;
-  gap: 30px;
+  position: relative;
 
-  &::-webkit-scrollbar {
-    width: 0;
-  }
+  display: flex;
+  gap: 30px;
 
   img {
     min-width: 270px;
     height: 234px;
   }
-  li {
-    &:nth-child(4) {
-      margin-right: 75px;
+
+  @include breakpoint(tablet) {
+    margin-top: 80px;
+  }
+
+  @include breakpoint(mobile-max) {
+    margin-top: 40px;
+    overflow-x: auto;
+  
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    li {
+      &:nth-child(4) {
+        margin-right: 75px;
+      }
     }
   }
+
 }
 
 .blur-effect5 {
   position: relative;
+  pointer-events: none;
   width: 270px;
   height: 240px;
   left: -10px;
@@ -44,20 +71,31 @@
 
   background: #43a5ff;
   filter: blur(265px);
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 // lines
 .services-lines {
-  position: absolute;
-  width: 300px;
-  display: flex;
-  gap: 10px;
-  margin-top: 16px;
+  @include breakpoint(mobile-max) {
+    position: absolute;
+    pointer-events: none;
+    width: 300px;
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
 
-  span {
-    background-color: $secondaryBgColors;
-    width: 65px;
-    height: 1px;
-    transition: height 0.4s ease;
+    span {
+      background-color: $secondaryBgColors;
+      width: 65px;
+      height: 1px;
+      transition: height 0.4s ease;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    display: none;
   }
 }
