@@ -23,7 +23,6 @@
   p {
     @include font($primary-font, 400, 20px, calc(24 / 20), $primaryTextColors);
   }
-
 }
 
 .about-photo-mobile {
@@ -32,36 +31,39 @@
   margin: -230px auto 0 auto;
   width: 345px;
   border-radius: 20px;
-
   @include breakpoint(tablet) {
     display: none;
   }
 }
 
-.about-text-list {
+.about-text-list-mobile {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin: 40px 0 20px;
   position: relative;
   z-index: 1;
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 
 // learn more
 .learn-more-text {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  max-height: 0px;
+  margin-bottom: 0px;
 
-  @include breakpoint(mobile-max) {
-    gap: 20px;
-    max-height: 0px;
-    margin-bottom: 0px;
-  
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-  
-    transition: max-height 1s ease, margin-bottom 1s ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+
+  transition: max-height 1s ease, margin-bottom 1s ease;
+  @include breakpoint(tablet) {
+    display: none;
   }
 }
 
@@ -95,7 +97,7 @@
   }
 }
 
-//TODO 
+//TODO
 .blur-effect6 {
   position: relative;
 

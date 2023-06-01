@@ -236,13 +236,15 @@
   z-index: 12;
   width: 237px;
   height: 165px;
-  left: 88px;
+  left: -28px;
   top: 80px;
+
+  background: #52FFFF;
+  filter: blur(286px);
+
   @include breakpoint(tablet) {
     display: none;
   }
-  background: #52ffff;
-  filter: blur(256px);
 }
 
 .blur-effect2 {
@@ -250,13 +252,15 @@
   z-index: 12;
   width: 256px;
   height: 241px;
-  left: 50px;
+  left: 136px;
   top: 300px;
+
+  background: #43A5FF;
+  filter: blur(265px);
+
   @include breakpoint(tablet) {
     display: none;
   }
-  background: rgb(66, 164, 255);
-  filter: blur(226px);
 }
 
 .list-menu-mobile {
