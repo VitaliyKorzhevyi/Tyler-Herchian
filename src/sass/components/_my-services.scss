@@ -1,11 +1,11 @@
 .services {
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     max-width: 1200px;
     margin: 75px auto;
     padding: 0 15px;
   }
 
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     margin-top: 90px;
     height: 354px;
   }
@@ -16,11 +16,11 @@
   z-index: 1;
   text-align: center;
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     @include font($secondary-font, 400, 55px, calc(68 / 55), $primaryTextColors);
   }
 
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     @include font($secondary-font, 400, 40px, calc(50 / 40), $primaryTextColors);
   }
  
@@ -40,11 +40,11 @@
     height: 234px;
   }
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     margin-top: 80px;
   }
 
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     margin-top: 40px;
     overflow-x: auto;
   
@@ -72,14 +72,14 @@
   background: #43a5ff;
   filter: blur(265px);
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
 
 // lines
 .services-lines {
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     position: absolute;
     pointer-events: none;
     width: 300px;
@@ -95,7 +95,7 @@
     }
   }
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }

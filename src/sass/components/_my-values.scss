@@ -1,19 +1,42 @@
 .my-values {
-  padding: 80px 15px;
-  height: 1650px;
+  @include breakpoint(desktop) {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 150px 15px;
+  }
+
+  @include breakpoint(tablet-max) {
+    padding: 80px 15px;
+    height: 1650px;
+  }
 
   h2 {
     position: relative;
     z-index: 1;
     text-align: center;
     text-transform: uppercase;
-    @include font(
-      $secondary-font,
-      400,
-      40px,
-      calc(50 / 40),
-      $primaryTextColors
-    );
+
+    @include breakpoint(desktop) {
+      margin-bottom: 80px;
+      @include font(
+        $secondary-font,
+        400,
+        50px,
+        calc(62 / 50),
+        $primaryTextColors
+      );
+    }
+
+    @include breakpoint(tablet-max) {
+      @include font(
+        $secondary-font,
+        400,
+        40px,
+        calc(50 / 40),
+        $primaryTextColors
+      );
+    }
 
     span {
       color: $accentTextColors;
@@ -21,29 +44,57 @@
   }
 
   img {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    margin: 0 auto 80px;
+    @include breakpoint(tablet-max) {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      margin: 0 auto 80px;
+    }
+  }
+}
+
+.my-mission-desktop {
+  @include breakpoint(tablet-max) {
+    display: none;
   }
 }
 
 .my-mission {
   top: -260px;
   max-width: 345px;
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
 }
 
 .my-values-list {
   position: relative;
   z-index: 1;
   display: flex;
-  flex-direction: column;
-  padding-bottom: 60px;
-  top: -260px;
-  margin: 0 auto;
+
+  @include breakpoint(desktop) {
+    justify-content: center;
+    gap: 120px;
+    padding-bottom: 80px;
+  }
+
+  @include breakpoint(tablet-max) {
+    flex-direction: column;
+    padding-bottom: 60px;
+    top: -260px;
+    margin: 0 auto;
+  }
+
   img {
-    width: 50px;
-    margin: 40px auto 20px;
+    @include breakpoint(desktop) {
+      width: 70px;
+      margin: 0 auto 30px;
+    }
+    @include breakpoint(tablet-max) {
+      width: 50px;
+      margin: 40px auto 20px;
+    }
   }
 
   h3 {
@@ -72,6 +123,27 @@
   }
 }
 
+.my-values-text-desktop {
+  // display: flex;
+  // flex-direction: column;
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      position: relative;
+      &:nth-child(2) {
+  
+       right: 0px;
+      }
+    }
+  }
+  p {
+    text-transform: uppercase;
+    @include font($primary-font, 400, 55px, calc(89 / 55), $primaryTextColors);
+  }
+}
+
 .my-values-text {
   position: relative;
   top: -546px;
@@ -80,22 +152,44 @@
   margin: 0 auto 20px;
   max-width: 345px;
   @include font($primary-font, 300, 20px, calc(40 / 20), $primaryTextColors);
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
 }
 
 .my-values-text-author {
   position: relative;
-  top: -546px;
-  text-align: center;
-  @include font($secondary-font, 400, 16px, calc(24 / 16), $primaryTextColors);
+  @include breakpoint(desktop) {
+    @include font(
+      $secondary-font,
+      400,
+      20px,
+      calc(24 / 20),
+      $primaryTextColors
+    );
+  }
+  @include breakpoint(tablet-max) {
+    top: -546px;
+    text-align: center;
+    @include font(
+      $secondary-font,
+      400,
+      16px,
+      calc(24 / 16),
+      $primaryTextColors
+    );
+  }
 }
 
+// BLUR
 .blur-effect8 {
   position: relative;
   top: 30px;
   width: 316px;
   height: 252px;
   left: 12px;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
   background: #52ffff;
@@ -108,7 +202,7 @@
   height: 283px;
   left: 120px;
   top: -404px;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
   background: #43a4ff;

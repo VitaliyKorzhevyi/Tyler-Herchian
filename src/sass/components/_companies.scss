@@ -1,31 +1,102 @@
 .companies {
   background-color: $secondaryBgColors;
-  margin: 0 auto;
-  padding: 40px 15px;
+  @include breakpoint(tablet-max) {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 15px;
+  }
+
   h2 {
-    text-align: center;
-    @include font(
-      $secondary-font,
-      400,
-      40px,
-      calc(50 / 40),
-      $companiesTextColors
-    );
+    @include breakpoint(desktop) {
+      @include font(
+        $secondary-font,
+        400,
+        55px,
+        calc(68 / 55),
+        $companiesTextColors
+      );
+    }
+
+    @include breakpoint(tablet-max) {
+      text-align: center;
+
+      @include font(
+        $secondary-font,
+        400,
+        40px,
+        calc(50 / 40),
+        $companiesTextColors
+      );
+    }
   }
 
   p {
-    margin-top: 30px;
-    @include font(
-      $primary-font,
-      400,
-      14px,
-      calc(24 / 14),
-      $companiesTextColors
-    );
+    @include breakpoint(desktop) {
+      max-width: 632px;
+      @include font(
+        $primary-font,
+        400,
+        18px,
+        calc(24 / 18),
+        $companiesTextColors
+      );
+    }
+
+    @include breakpoint(tablet-max) {
+      margin-top: 30px;
+
+      @include font(
+        $primary-font,
+        400,
+        14px,
+        calc(24 / 14),
+        $companiesTextColors
+      );
+    }
+  }
+}
+
+.companies-container {
+  @include breakpoint(desktop) {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 97px 15px 84px;
+    display: flex;
+    justify-content: space-between;
+    div {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 44px;
+    }
   }
 }
 
 .companies-list {
+  @include breakpoint(desktop) {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    li {
+      &:nth-child(1) {
+        width: 149px;
+      }
+
+      &:nth-child(2) {
+        width: 280px;
+      }
+
+      &:nth-child(3) {
+        width: 237px;
+      }
+    }
+  }
+
+  @include breakpoint(tablet-max) {
+    display: none;
+  }
+}
+
+.companies-list-mobile {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -44,5 +115,8 @@
     &:nth-child(3) {
       width: 122px;
     }
+  }
+  @include breakpoint(desktop) {
+    display: none;
   }
 }

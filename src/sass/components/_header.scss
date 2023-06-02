@@ -5,7 +5,7 @@
 }
 
 .header {
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     max-width: 1200px;
     margin: 0 auto;
     padding: 21px 15px 21px;
@@ -14,14 +14,14 @@
     justify-content: space-between;
   }
 
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     padding: 20px 15px 0;
   }
 }
 
 .logo {
   width: 137px;
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     display: none;
   }
 }
@@ -29,7 +29,7 @@
 .logo-mobile {
   position: relative;
   z-index: 2;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -39,7 +39,7 @@
   display: flex;
   gap: 50px;
   margin-right: 28px;
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     display: none;
   }
   &__item-menu {
@@ -58,7 +58,7 @@
   display: flex;
   gap: 15px;
 
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     display: none;
   }
 
@@ -85,7 +85,7 @@
   display: block;
   background: $linesColors;
   border-radius: 2px;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -94,14 +94,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
 
 // backdrop-menu
 .backdrop-menu {
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
   position: absolute;
@@ -242,7 +242,7 @@
   background: #52FFFF;
   filter: blur(286px);
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -258,7 +258,7 @@
   background: #43A5FF;
   filter: blur(265px);
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }

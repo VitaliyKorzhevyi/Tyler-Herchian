@@ -1,5 +1,5 @@
 .achievement {
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     position: relative;
     max-width: 1200px;
     margin: 215px auto 40px;
@@ -8,14 +8,14 @@
     flex-direction: column;
   }
 
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     margin: 76px auto 0;
   }
   h3 {
     text-transform: uppercase;
     position: relative;
 
-    @include breakpoint(tablet) {
+    @include breakpoint(desktop) {
       margin-top: 4px;
       @include font(
         $secondary-font,
@@ -26,7 +26,7 @@
       );
     }
 
-    @include breakpoint(mobile-max) {
+    @include breakpoint(tablet-max) {
       margin: 0 auto;
       width: 335px;
       z-index: 1;
@@ -40,11 +40,11 @@
     }
 
     span {
-      @include breakpoint(tablet) {
+      @include breakpoint(desktop) {
         color: $accentTextColors;
       }
 
-      @include breakpoint(mobile-max) {
+      @include breakpoint(tablet-max) {
         @include font(
           $secondary-font,
           400,
@@ -58,7 +58,7 @@
 }
 
 .achievement-container {
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: flex;
   }
 }
@@ -69,7 +69,7 @@
   width: 315px;
   height: 219px;
   left: -32px;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
   background: rgba(82, 255, 255, 0.7);
@@ -81,15 +81,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     margin-bottom: 100px;
   }
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     top: -160px;
     margin: 8px auto 0px;
     gap: 45px;
   }
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     li {
       // position: relative;
       &:nth-child(1) {
@@ -124,66 +124,66 @@
   }
 
   .text1 {
-    @include breakpoint(tablet) {
+    @include breakpoint(desktop) {
       width: 459px;
       padding-left: 19px;
       margin-bottom: 66px;
     }
 
-    @include breakpoint(mobile-max) {
+    @include breakpoint(tablet-max) {
       width: 326px;
       padding-left: 18px;
     }
   }
 
   .value1 {
-    @include breakpoint(tablet) {
+    @include breakpoint(desktop) {
       top: -11px;
     }
-    @include breakpoint(mobile-max) {
+    @include breakpoint(tablet-max) {
       top: -24px;
     }
   }
 
   .text2 {
-    @include breakpoint(tablet) {
+    @include breakpoint(desktop) {
       padding-left: 46px;
       width: 538px;
       margin-bottom: 84px;
     }
-    @include breakpoint(mobile-max) {
+    @include breakpoint(tablet-max) {
       padding-left: 26px;
       width: 340px;
     }
   }
 
   .value2 {
-    @include breakpoint(tablet) {
+    @include breakpoint(desktop) {
       padding-left: 5px;
       top: -24px;
     }
-    @include breakpoint(mobile-max) {
+    @include breakpoint(tablet-max) {
       padding-left: -4px;
       top: 116px;
     }
   }
 
   .text3 {
-    @include breakpoint(tablet) {
+    @include breakpoint(desktop) {
       padding-left: 40px;
       width: 431px;
     }
-    @include breakpoint(mobile-max) {
+    @include breakpoint(tablet-max) {
       padding-left: 31px;
       width: 340px;
     }
   }
 
   .value3 {
-    @include breakpoint(tablet) {
+    @include breakpoint(desktop) {
       top: -22px;
     }
-    @include breakpoint(mobile-max) {
+    @include breakpoint(tablet-max) {
       top: 256px;
     }
   }
@@ -206,7 +206,7 @@
     );
   }
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }

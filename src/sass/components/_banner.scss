@@ -1,26 +1,26 @@
 .banner {
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 15px 75px;
     display: flex;
     flex-direction: column;
   }
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     margin-top: 80px;
     height: 1190px;
   }
 }
 
 .banner-desktop {
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: flex;
     align-items: center;
   }
 }
 
 .banner-info {
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     padding: 38px 0 0;
     margin-right: 34px;
     max-width: 594px;
@@ -30,7 +30,7 @@
 .banner-title {
   position: relative;
   z-index: 1;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     width: 100%;
     @include font(
       $secondary-font,
@@ -40,7 +40,7 @@
       $primaryTextColors
     );
   }
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     @include font(
       $secondary-font,
       400,
@@ -55,13 +55,13 @@
   position: relative;
   z-index: 1;
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     max-width: 448px;
     margin-top: 30px;
     @include font($primary-font, 400, 32px, calc(32 / 32), $primaryTextColors);
   }
 
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     margin-top: 20px;
     @include font($primary-font, 400, 24px, calc(24 / 24), $primaryTextColors);
   }
@@ -76,11 +76,11 @@
   width: 171px;
   border-radius: 70px;
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     height: 40px;
   }
 
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     height: 35px;
   }
   background: linear-gradient(
@@ -97,11 +97,11 @@
   margin-top: 1px;
   width: 170px;
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     height: 38px;
   }
 
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     height: 33px;
   }
   border-radius: 70px;
@@ -115,11 +115,11 @@
   box-sizing: border-box;
   width: 170px;
   height: 35px;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     height: 40px;
   }
 
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     height: 35px;
   }
 
@@ -144,7 +144,7 @@
 
 .banner-human-image {
   padding-right: 40px;
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     display: none;
   }
 
@@ -160,7 +160,7 @@
   width: 310px;
   position: relative;
   z-index: 1;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -176,7 +176,7 @@
   background: #52FFFF;
   filter: blur(286px);
   
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -185,13 +185,13 @@
   position: relative;
   width: 256px;
   height: 241px;
-  left: 111px;
+  left: 90px;
   top: -970px;
 
   background: #43A5FF;
   filter: blur(265px);
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -200,19 +200,19 @@
 // experience list
 .banner-list {
   display: flex;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     margin-top: 100px;
     align-items: center;
     justify-content: space-evenly;
     gap: 60px;
   }
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     text-align: center;
     flex-direction: column;
     gap: 40px;
   }
   li {
-    @include breakpoint(tablet) {
+    @include breakpoint(desktop) {
       &:nth-child(1) {
         height: 170px;
         width: 257px;
@@ -234,14 +234,14 @@
   color: $primaryTextColors;
 
   &__value {
-    @include breakpoint(tablet) {
+    @include breakpoint(desktop) {
       height: 115px;
       margin-bottom: 15px;
       text-align: center;
       @include font($primary-font, 400, 115px, calc(115 / 115));
     }
 
-    @include breakpoint(mobile-max) {
+    @include breakpoint(tablet-max) {
       height: 70px;
       margin-bottom: 10px;
 
@@ -250,12 +250,12 @@
   }
 
   &__text {
-    @include breakpoint(tablet) {
+    @include breakpoint(desktop) {
       text-align: center;
       @include font($primary-font, 400, 20px, calc(20 / 20));
     }
 
-    @include breakpoint(mobile-max) {
+    @include breakpoint(tablet-max) {
       @include font($primary-font, 400, 20px, calc(24 / 20));
     }
   }

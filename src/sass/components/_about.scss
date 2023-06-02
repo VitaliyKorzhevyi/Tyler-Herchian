@@ -1,11 +1,11 @@
 .about {
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
   }
 
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     margin-top: 84px;
   }
 
@@ -28,7 +28,7 @@
 .about-container1 {
   display: flex;
   gap: 72px;
-  @include breakpoint(mobile-max) {
+  @include breakpoint(tablet-max) {
     display: none;
   }
 }
@@ -71,7 +71,7 @@ justify-content: space-between;
 
 .about-down-text {
   margin-top: 25px;
-    @include breakpoint(mobile-max) {
+    @include breakpoint(tablet-max) {
     display: none;
   }
 }
@@ -90,7 +90,7 @@ justify-content: space-between;
 
 // mobile-version
 .about-title-mobile {
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -101,7 +101,7 @@ justify-content: space-between;
   margin: -230px auto 0 auto;
   width: 345px;
   border-radius: 20px;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -114,7 +114,7 @@ justify-content: space-between;
   position: relative;
   z-index: 1;
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -132,7 +132,7 @@ justify-content: space-between;
   z-index: 2;
 
   transition: max-height 1s ease, margin-bottom 1s ease;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -141,7 +141,7 @@ justify-content: space-between;
   position: absolute;
   z-index: 2;
   opacity: 0;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -154,7 +154,7 @@ justify-content: space-between;
 
   @include font($primary-font, 400, 16px, calc(16 / 16), $secondaryTextColors);
   text-decoration-line: underline;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -162,7 +162,7 @@ justify-content: space-between;
 .read-more-cheacker:checked ~ .learn-more-text {
   max-height: 520px;
   margin-bottom: 12px;
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
@@ -179,7 +179,7 @@ justify-content: space-between;
   background: rgb(67, 164, 255);
   filter: blur(265px);
 
-  @include breakpoint(tablet) {
+  @include breakpoint(desktop) {
     display: none;
   }
 }
