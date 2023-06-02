@@ -1,5 +1,6 @@
 .ticker-text {
-    max-width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
     // height: 120%;
     overflow: hidden; //! можно поменять
   
@@ -10,7 +11,7 @@
     div {
       display: flex;
       width: 200%;
-      animation: marquee-infinite 10s linear infinite;
+      animation: marquee-infinite 12s linear infinite;
     }
   
     span {
@@ -18,7 +19,7 @@
       display: flex;
       justify-content: space-around;
       &:nth-child(1) {
-        // margin-right: 560px;
+        // margin-right: 20px;
       }
     }
   
@@ -41,6 +42,6 @@
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-124%);
+      transform: translateX(-100%); //-124%
     }
   }
