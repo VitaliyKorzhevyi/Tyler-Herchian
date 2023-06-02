@@ -17,6 +17,7 @@
     span {
       width: 100%;
       display: flex;
+      gap: 50px;
       justify-content: space-around;
       &:nth-child(1) {
         // margin-right: 20px;
@@ -24,7 +25,7 @@
     }
   
     p {
-      margin-right: 50px;
+      
       width: 20%;
       height: 100%;
       @include font(
@@ -36,12 +37,15 @@
       );
     }
   }
+  .ticker-container {
+    gap: 50px;
+  }
   
   @keyframes marquee-infinite {
     0% {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-100%); //-124%
+      transform: translateX(-101%); //-124%
     }
   }
