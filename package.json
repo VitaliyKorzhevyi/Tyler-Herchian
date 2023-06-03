@@ -5,7 +5,8 @@
   "homepage": "https://VitaliyKorzhevyi.github.io/Tyler-Herchian",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Tyler-Herchian/"
+    "build": "parcel build src/*.html --public-url /Tyler-Herchian/",
+    "server": "parcel serve src/index.html --port 1235"
   },
   "repository": {
     "type": "git",
