@@ -49,15 +49,3 @@ window.matchMedia('(min-width: 320px)').addEventListener('change', e => {
   bodyScrollLock.classList.remove('no-scroll');
 });
 
-
-// window.addEventListener('resize', function() {
-//   var windowWidth = window.innerWidth;
-//   var scale = 1;
-
-//   if (windowWidth <= 768) {
-//     scale = 0.5;
-//   }
-
-//   var fixedElement = document.getElementById('fixedElement');
-//   fixedElement.style.transform = 'translate(-50%, -50%) scale(' + scale + ')';
-// });
