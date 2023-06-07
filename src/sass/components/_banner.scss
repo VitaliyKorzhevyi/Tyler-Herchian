@@ -143,6 +143,7 @@
 }
 
 .banner-human-image {
+  position: relative;
   padding-right: 40px;
   @include breakpoint(tablet-max) {
     display: none;

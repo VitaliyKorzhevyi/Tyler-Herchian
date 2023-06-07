@@ -38,6 +38,9 @@
   img {
     min-width: 270px;
     height: 234px;
+    &:hover{
+      transform: scale(1.03);
+    }
   }
 
   @include breakpoint(desktop) {
@@ -60,6 +63,10 @@
   }
 
 }
+
+// .services-image:hover {
+//   transform: scale(1);
+// }
 
 .blur-effect5 {
   position: relative;
