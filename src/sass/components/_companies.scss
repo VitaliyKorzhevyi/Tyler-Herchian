@@ -1,4 +1,5 @@
 .companies {
+  position: relative;
   background-color: $secondaryBgColors;
   @include breakpoint(tablet-max) {
     max-width: 100%;

@@ -59,6 +59,7 @@ justify-content: space-between;
     margin-bottom: 10px;
   }
   p {
+    position: relative;
     max-width: 411px;
   }
 }
@@ -67,9 +68,13 @@ justify-content: space-between;
   display: flex;
   flex-direction: column;
   gap: 30px;
+  p{
+    position: relative;
+  }
 }
 
 .about-down-text {
+  position: relative;
   margin-top: 25px;
     @include breakpoint(tablet-max) {
     display: none;
@@ -77,12 +82,14 @@ justify-content: space-between;
 }
 
 .about-photo-desktop1 {
+  position: relative;
   max-width: 398px;
   height: 539px;
   border-radius: 20px;
 }
 
 .about-photo-desktop2 {
+  position: relative;
   max-width: 237px;
   height: 309px;
   border-radius: 20px;
