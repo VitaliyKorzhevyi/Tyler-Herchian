@@ -1,31 +1,71 @@
 footer {
   position: relative;
+  padding: 50px 0 52px;
+
   background-color: $footerBgColors;
-  padding: 40px 15px 10px;
+
+  @include breakpoint(tablet-max) {
+    padding: 40px 15px 10px;
+  }
 
   img {
     width: 137px;
   }
 }
 
+.footer-container-desktop {
+  @include breakpoint(desktop) {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+.footer-desktop-logo {
+  width: 137px;
+  margin-right: 40px;
+  @include breakpoint(tablet-max) {
+    display: none;
+  }
+}
+
+.footer-mobile-logo {
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
 .footer-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  @include breakpoint(desktop) {
+    align-items: center;
+  }
+  @include breakpoint(tablet-max) {
+    margin-top: 30px;
+  }
 }
 
 .footer-menu {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 11px;
 
-  width: 177px;
-li {
-    &:nth-child(n+3) {
+  @include breakpoint(desktop) {
+    gap: 50px;
+  }
+
+  @include breakpoint(tablet-max) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 11px;
+    width: 177px;
+
+    li {
+      &:nth-child(n + 3) {
         margin-top: 20px;
+      }
     }
-}
+  }
   p {
     @include font(
       $primary-font,
@@ -46,12 +86,21 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 1px;
 
     width: 38px;
     height: 38px;
 
     border-radius: 50%;
     background-color: #fff;
+    &:hover .soc-icon-footer,
+    &:focus .soc-icon-footer{
+      stroke: #929292;
+    }
+  }
+
+  .accent {
+    background-color: #D5E9F5;
   }
 }
 
@@ -61,12 +110,25 @@ li {
 }
 
 .text-copyright {
-    margin-top: 40px;
+  margin-top: 40px;
+  @include font($primary-font, 400, 14px, calc(14 / 14), $copyrightTextColors);
+  @include breakpoint(tablet-max) {
     @include font(
-        $primary-font,
-        400,
-        12px,
-        calc(12 / 12),
-        $copyrightTextColors
-      );
+      $primary-font,
+      400,
+      12px,
+      calc(12 / 12),
+      $copyrightTextColors
+    );
+  }
 }
+
+.item-arrow {
+  @include breakpoint(tablet-max) {
+    display: none;
+  }
+}
+
+// .soc-icon-footer-arrow {
+
+// }

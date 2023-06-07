@@ -35,7 +35,7 @@
 }
 
 // Elements menu
-.list-menu {
+.nav-menu {
   display: flex;
   gap: 50px;
   margin-right: 28px;
@@ -51,6 +51,22 @@
       $secondaryTextColors
     );
   }
+}
+
+.line-nav::after {
+  content: '';
+  height: 2px;
+  width: 0%;
+  display: block;
+  transition: 0.4s ease-in-out;
+}
+
+.line-nav:hover::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: $secondaryTextColors;
+  display: block;
 }
 
 // icons-soc
@@ -72,6 +88,10 @@
 
     border-radius: 50%;
     background-color: #d5e9f5;
+    &:hover .soc-icon,
+    &:focus .soc-icon{
+      stroke: #929292;
+    }
   }
 }
 
@@ -263,7 +283,7 @@
   }
 }
 
-.list-menu-mobile {
+.nav-menu-mobile {
   position: relative;
   z-index: 13;
   top: -300px;

@@ -1,4 +1,11 @@
 .contact {
+  @include breakpoint(desktop) {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px 150px;
+  }
+
   @include breakpoint(tablet-max) {
     margin-bottom: 80px;
     height: 920px;
@@ -8,33 +15,78 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    margin-bottom: 40px;
 
-    @include font(
-      $secondary-font,
-      400,
-      40px,
-      calc(50 / 40),
-      $contactTextColors
-    );
+    @include breakpoint(tablet-max) {
+      margin-bottom: 40px;
+      @include font(
+        $secondary-font,
+        400,
+        40px,
+        calc(50 / 40),
+        $contactTextColors
+      );
+    }
+
+    @include breakpoint(desktop) {
+      margin-bottom: 80px;
+      @include font(
+        $secondary-font,
+        400,
+        55px,
+        calc(68 / 55),
+        $contactTextColors
+      );
+    }
   }
 
   &__text {
     position: relative;
     z-index: 1;
-    margin: 0 auto 30px;
     @include font($primary-font, 400, 20px, calc(20 / 20), $primaryTextColors);
-  }
+    @include breakpoint(desktop) {
+      margin-bottom: 40px;
+    }
 
-  img {
+    @include breakpoint(tablet-max) {
+      margin: 0 auto 30px;
+    }
+  }
+}
+
+.contact-desktop-img {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  width: 370px;
+  @include breakpoint(tablet-max) {
+    display: none;
+  }
+}
+
+.contact-mobile-img {
     position: relative;
     z-index: 1;
     border-radius: 20px;
-    @include breakpoint(tablet-max) {
-      top: -280px;
-      margin: 60px auto 0;
-      width: 345px;
-    }
+    top: -280px;
+    margin: 60px auto 0;
+    width: 345px;
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}
+
+.contact-container {
+  @include breakpoint(desktop) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.form-container {
+  @include breakpoint(desktop) {
+    max-width: 700px;
   }
 }
 
@@ -55,14 +107,24 @@
 .contact-form {
   position: relative;
   z-index: 1;
-  @include breakpoint(tablet-max) {
-    top: -280px;
-  }
   display: flex;
   flex-direction: column;
-  gap: 15px;
+
+  @include breakpoint(desktop) {
+    gap: 30px;
+  }
+
+  @include breakpoint(tablet-max) {
+    top: -280px;
+    gap: 15px;
+  }
 
   textarea {
+    @include breakpoint(desktop) {
+      height: 100px;
+      padding: 20px 25px;
+      border-radius: 30px;
+    }
     height: 80px;
     resize: none;
     border-radius: 20px;
@@ -70,6 +132,11 @@
   }
 
   input {
+    @include breakpoint(desktop) {
+      height: 60px;
+      padding: 21px 25px;
+    }
+
     border-radius: 70px;
     padding: 13px 20px;
   }
@@ -82,6 +149,9 @@
   color: $secondaryTextColors;
 
   &::placeholder {
+    @include breakpoint(desktop) {
+      @include font($primary-font, 400, 20px, calc(20 / 20), $inputTextColors);
+    }
     @include font($primary-font, 400, 14px, calc(14 / 14), $inputTextColors);
   }
 
@@ -101,6 +171,10 @@
   height: 35px;
   border-radius: 70px;
 
+  @include breakpoint(desktop) {
+    height: 45px;
+  }
+
   background: linear-gradient(
     168deg,
     rgba(255, 255, 255, 0) 25%,
@@ -117,6 +191,9 @@
   height: 33px;
   border-radius: 70px;
   background-color: $primaryBgColors;
+  @include breakpoint(desktop) {
+    height: 43px;
+  }
 }
 
 .contact-button {
@@ -136,6 +213,10 @@
   border: none;
   border-radius: 70px;
   @include font($primary-font, 400, 16px, calc(16 / 16), $secondaryTextColors);
+
+  @include breakpoint(desktop) {
+    height: 45px;
+  }
 }
 
 .contact-button:focus {
@@ -148,7 +229,10 @@
 
 .communication-list {
   position: relative;
-  top: -280px;
+  @include breakpoint(tablet-max) {
+    top: -280px;
+  }
+
   display: flex;
   flex-direction: column;
   gap: 20px;

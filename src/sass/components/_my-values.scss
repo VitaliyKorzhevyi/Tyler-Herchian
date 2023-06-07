@@ -7,7 +7,7 @@
   }
 
   @include breakpoint(tablet-max) {
-    padding: 80px 15px;
+    padding: 80px 15px 20px;
     height: 1650px;
   }
 
@@ -180,6 +180,7 @@
 }
 
 .my-values-text-author {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   @include breakpoint(desktop) {
