@@ -4,6 +4,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 150px 15px;
+    overflow-x: hidden;
   }
 
   @include breakpoint(tablet-max) {
@@ -198,9 +199,8 @@
       calc(24 / 20),
       $primaryTextColors
     );
-
-    // animation: slideInRight;
-    // animation-duration: 1.4s;
+    animation: fadeInRight;
+    animation-duration: 1.4s;
   }
   @include breakpoint(tablet-max) {
     top: -546px;
