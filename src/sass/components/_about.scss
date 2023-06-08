@@ -14,7 +14,7 @@
 
     @include breakpoint(desktop) {
       animation: slideInLeft;
-      animation-duration: 1.1s;
+      animation-duration: 1.8s;
     }
 
     @include font(
@@ -34,6 +34,7 @@
     // }
   }
 }
+
 // desktop-version
 .about-container1 {
   display: flex;

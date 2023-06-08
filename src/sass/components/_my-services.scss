@@ -3,8 +3,6 @@
     max-width: 1200px;
     margin: 75px auto;
     padding: 0 15px;
-    // overflow-x: hidden;
-    // overflow-y: hidden;
   }
 
   @include breakpoint(tablet-max) {
@@ -29,8 +27,7 @@
     );
 
     animation: fadeInLeft;
-    animation-duration: 1.4s;
-    // animation-delay: 0.01s;
+    animation-duration: 1.8s;
   }
 
   @include breakpoint(tablet-max) {

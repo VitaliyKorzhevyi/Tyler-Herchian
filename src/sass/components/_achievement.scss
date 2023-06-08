@@ -24,6 +24,10 @@
         calc(62 / 50),
         $primaryTextColors
       );
+
+      
+    animation: fadeInLeft;
+    animation-duration: 1.8s;
     }
 
     @include breakpoint(tablet-max) {
@@ -81,17 +85,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include breakpoint(desktop) {
-    margin-bottom: 100px;
-  }
+
   @include breakpoint(tablet-max) {
     top: -160px;
     margin: 8px auto 0px;
     gap: 45px;
   }
   @include breakpoint(desktop) {
+    margin-bottom: 100px;
     li {
-      // position: relative;
       &:nth-child(1) {
         position: relative;
         left: 24px;
@@ -107,6 +109,9 @@
         left: -10px;
       }
     }
+
+    animation: fadeInRight;
+    animation-duration: 1.8s;
   }
   &__value {
     position: absolute;

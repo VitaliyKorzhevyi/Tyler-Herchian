@@ -36,6 +36,9 @@
         calc(68 / 55),
         $contactTextColors
       );
+
+      animation: fadeInLeft;
+      animation-duration: 1.8s;
     }
   }
 
@@ -58,18 +61,19 @@
   z-index: 1;
   border-radius: 20px;
   width: 370px;
+
   @include breakpoint(tablet-max) {
     display: none;
   }
 }
 
 .contact-mobile-img {
-    position: relative;
-    z-index: 1;
-    border-radius: 20px;
-    top: -280px;
-    margin: 60px auto 0;
-    width: 345px;
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  top: -280px;
+  margin: 60px auto 0;
+  width: 345px;
 
   @include breakpoint(desktop) {
     display: none;
@@ -87,6 +91,9 @@
 .form-container {
   @include breakpoint(desktop) {
     max-width: 700px;
+
+    animation: fadeInUp;
+    animation-duration: 1.4s;
   }
 }
 
@@ -247,5 +254,9 @@
   }
   .contact-icon-mail {
     margin-bottom: 4px;
+  }
+  @include breakpoint(desktop) {
+    animation: fadeInUp;
+    animation-duration: 1.4s;
   }
 }
