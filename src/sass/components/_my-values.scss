@@ -27,8 +27,8 @@
         $primaryTextColors
       );
 
-      // animation: slideInLeft;
-      // animation-duration: 1.4s;
+      animation: slideInLeft;
+      animation-duration: 1.4s;
     }
 
     @include breakpoint(tablet-max) {
