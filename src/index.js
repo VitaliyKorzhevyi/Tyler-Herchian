@@ -10,7 +10,7 @@ AOS.init({
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.querySelector('.backdrop-menu');
 const bodyScrollLock = document.querySelector('body');
-// list-menu__item-menu
+
 
 menuToggle.addEventListener('click', onBtnToggleClass);
 function onBtnToggleClass() {
