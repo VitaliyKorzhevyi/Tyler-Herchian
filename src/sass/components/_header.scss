@@ -1,23 +1,28 @@
 // parcel serve src/index.html --port 1235
 
-
 * {
   transition: 0.14s ease-in-out;
 }
 
 .header {
   @include breakpoint(desktop) {
+    animation: fadeInDown;
+    animation-duration: 1.1s;
     max-width: 1200px;
     margin: 0 auto;
     padding: 21px 15px 21px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    // height: 42px;
   }
 
   @include breakpoint(tablet-max) {
     padding: 20px 15px 0;
+  }
+}
+
+.container-header {
+  @include breakpoint(desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
@@ -92,7 +97,7 @@
     border-radius: 50%;
     background-color: #d5e9f5;
     &:hover .soc-icon,
-    &:focus .soc-icon{
+    &:focus .soc-icon {
       stroke: #929292;
     }
   }
@@ -262,7 +267,7 @@
   left: -28px;
   top: 80px;
 
-  background: #52FFFF;
+  background: #52ffff;
   filter: blur(286px);
 
   @include breakpoint(desktop) {
@@ -278,7 +283,7 @@
   left: 136px;
   top: 300px;
 
-  background: #43A5FF;
+  background: #43a5ff;
   filter: blur(265px);
 
   @include breakpoint(desktop) {
@@ -339,5 +344,4 @@
   left: 6px;
   max-width: 280px;
   height: 300px;
-
 }

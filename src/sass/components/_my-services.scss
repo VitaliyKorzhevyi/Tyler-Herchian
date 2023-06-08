@@ -17,13 +17,28 @@
   text-align: center;
 
   @include breakpoint(desktop) {
-    @include font($secondary-font, 400, 55px, calc(68 / 55), $primaryTextColors);
+    @include font(
+      $secondary-font,
+      400,
+      55px,
+      calc(68 / 55),
+      $primaryTextColors
+    );
+
+    animation: slideInLeft;
+    animation-duration: 1.8s;
   }
 
   @include breakpoint(tablet-max) {
-    @include font($secondary-font, 400, 40px, calc(50 / 40), $primaryTextColors);
+    @include font(
+      $secondary-font,
+      400,
+      40px,
+      calc(50 / 40),
+      $primaryTextColors
+    );
   }
- 
+
   span {
     color: $accentTextColors;
   }
@@ -38,8 +53,10 @@
   img {
     min-width: 270px;
     height: 234px;
-    &:hover{
-      transform: scale(1.03);
+    @include breakpoint(desktop) {
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
 
@@ -50,7 +67,7 @@
   @include breakpoint(tablet-max) {
     margin-top: 40px;
     overflow-x: auto;
-  
+
     &::-webkit-scrollbar {
       width: 0;
     }
@@ -61,7 +78,6 @@
       }
     }
   }
-
 }
 
 // .services-image:hover {

@@ -1,22 +1,29 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+  delay: 0,
+  duration: 1000,
+  easing: 'ease-in-out',
+  once: true
+});
+
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.querySelector('.backdrop-menu');
 const bodyScrollLock = document.querySelector('body');
 // list-menu__item-menu
 
-menuToggle.addEventListener('click', onBtnToggleClass)
+menuToggle.addEventListener('click', onBtnToggleClass);
 function onBtnToggleClass() {
-    menuToggle.classList.toggle('open');
-    mobileMenu.classList.toggle('is-open');
-    bodyScrollLock.classList.toggle('no-scroll');
+  menuToggle.classList.toggle('open');
+  mobileMenu.classList.toggle('is-open');
+  bodyScrollLock.classList.toggle('no-scroll');
 }
-
 
 const itemMenu = document.querySelectorAll('.item-menu-closes');
 
 itemMenu.forEach(itemMenu => {
   itemMenu.addEventListener('click', onBtnToggleClass);
 });
-
 
 const servicesList = document.querySelector('.services-list');
 const servicesLines = document.querySelectorAll('.services-lines span');
@@ -41,11 +48,10 @@ function updateLinesHeight() {
     }
   });
 }
-  
+
 window.matchMedia('(min-width: 320px)').addEventListener('change', e => {
   if (!e.matches) return;
   mobileMenu.classList.remove('is-open');
   openMenuBtn.setAttribute('aria-expanded', false);
   bodyScrollLock.classList.remove('no-scroll');
 });
-

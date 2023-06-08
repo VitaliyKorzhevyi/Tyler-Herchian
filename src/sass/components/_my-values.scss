@@ -26,6 +26,9 @@
         calc(62 / 50),
         $primaryTextColors
       );
+
+      animation: slideInLeft;
+      animation-duration: 1.4s;
     }
 
     @include breakpoint(tablet-max) {
@@ -49,6 +52,9 @@
       z-index: 1;
       width: 100%;
       margin: 0 auto 80px;
+    }
+    &:hover {
+      transform: scale(1.03);
     }
   }
 }
@@ -132,6 +138,7 @@
 
     li {
       position: relative;
+      animation-duration: 1.6s;
       &:nth-child(2) {
         margin-left: auto;
       }
@@ -191,6 +198,9 @@
       calc(24 / 20),
       $primaryTextColors
     );
+
+    animation: slideInRight;
+    animation-duration: 1.4s;
   }
   @include breakpoint(tablet-max) {
     top: -546px;
