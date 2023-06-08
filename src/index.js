@@ -1,16 +1,59 @@
+import Notiflix from 'notiflix';
+
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init({
   delay: 0,
   duration: 1000,
   easing: 'ease-in-out',
-  once: true
+  once: true,
 });
+
+const forName = document.querySelector('#forName');
+const forEmail = document.querySelector('#forEmail');
+const formMessage = document.querySelector('#formMessage');
+const submitButton = document.querySelector('#submitForm');
+
+const handlerForm = e => {
+  e.preventDefault();
+  const formData = {
+    username: forName.value.trim(),
+    email: forEmail.value.trim(),
+    message: formMessage.value.trim(),
+  };
+
+  console.log(formData, 'formdat');
+
+  fetch('http://localhost:5000', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error repons');
+      }
+      console.log(response);
+      return response.json();
+    })
+    .then(data => {
+      Notiflix.Notify.success('Your message has been sent!');
+    })
+    .catch(error => {
+      Notiflix.Notify.warning('Invalid data.');
+    });
+  forName.value = '';
+  forEmail.value = '';
+  formMessage.value = '';
+};
+submitButton.addEventListener('click', handlerForm);
 
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.querySelector('.backdrop-menu');
 const bodyScrollLock = document.querySelector('body');
-
 
 menuToggle.addEventListener('click', onBtnToggleClass);
 function onBtnToggleClass() {

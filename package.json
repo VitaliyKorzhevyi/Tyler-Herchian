@@ -4,11 +4,9 @@
   "description": "",
   "homepage": "https://VitaliyKorzhevyi.github.io/Tyler-Herchian",
   "scripts": {
-    "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /Tyler-Herchian/",
     "server": "parcel serve src/index.html --port 1235",
-    "dev": "nodemon src/server.js" 
-
+    "dev": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,10 +20,15 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
     "express": "^4.18.2",
+    "joi": "^17.9.2",
     "jquery": "^3.7.0",
     "modern-normalize": "^1.1.0",
     "nodemailer": "^6.9.3",
+    "notiflix": "^3.2.6",
+    "start": "^5.1.0",
     "wow": "^0.0.6",
     "wow.js": "^1.2.2",
     "wowjs": "^1.1.3"
