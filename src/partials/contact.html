@@ -18,7 +18,10 @@
             name="name"
             placeholder="Name"
             class="form-input"
+            minlength="3"
+            maxlength="30"
           />
+        </label>
         </div>
 
         <div class="form-item">
@@ -41,12 +44,16 @@
             placeholder="Our question"
             class="form-input"
             rows="3"
+            minlength="10"
+            maxlength="300"
           ></textarea>
         </div>
 
         <div class="contact-btn-border1">
           <div class="contact-btn-border2">
-            <button type="button" class="contact-button" id="submitForm">submit</button>
+            <button type="button" class="contact-button" id="submitForm">
+              submit
+            </button>
           </div>
         </div>
       </div>

@@ -116,6 +116,7 @@
   position: absolute;
   z-index: 3;
   box-sizing: border-box;
+  cursor: pointer;
   width: 170px;
   height: 35px;
   @include breakpoint(desktop) {
@@ -177,9 +178,9 @@
   left: -95px;
   top: -1160px;
 
-  background: #52FFFF;
+  background: #52ffff;
   filter: blur(286px);
-  
+
   @include breakpoint(desktop) {
     display: none;
   }
@@ -192,14 +193,13 @@
   left: 90px;
   top: -970px;
 
-  background: #43A5FF;
+  background: #43a5ff;
   filter: blur(265px);
 
   @include breakpoint(desktop) {
     display: none;
   }
 }
-
 
 // experience list
 .banner-list {

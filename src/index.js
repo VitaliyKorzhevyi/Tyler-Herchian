@@ -51,6 +51,7 @@ const handlerForm = e => {
 };
 submitButton.addEventListener('click', handlerForm);
 
+
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.querySelector('.backdrop-menu');
 const bodyScrollLock = document.querySelector('body');

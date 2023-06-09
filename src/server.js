@@ -12,9 +12,9 @@ app.use(cors());
 //-------------------------------------------------------------------------------
 const validForm = (req, res, next) => {
   const schema = Joi.object({
-    username: Joi.string().min(3).max(20).required(),
+    username: Joi.string().min(3).max(30).required(),
     email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
-    message: Joi.string().min(3).max(200).required(),
+    message: Joi.string().min(10).max(300).required(),
   });
   const { error } = schema.validate(req.body);
   if (error) {

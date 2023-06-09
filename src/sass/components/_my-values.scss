@@ -54,19 +54,24 @@
       width: 100%;
       margin: 0 auto 80px;
     }
-    &:hover {
-      transform: scale(1.03);
-    }
   }
 }
 
 .my-mission-desktop {
+  &:hover {
+    transform: scale(1.015);
+  }
   @include breakpoint(tablet-max) {
     display: none;
   }
 }
-
+.my-mission-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 .my-mission {
+  
   top: -260px;
   max-width: 345px;
 
@@ -101,6 +106,10 @@
     @include breakpoint(tablet-max) {
       width: 50px;
       margin: 40px auto 20px;
+    }
+
+    &:hover {
+      transform: scale(1.03);
     }
   }
 

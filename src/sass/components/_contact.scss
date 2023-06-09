@@ -170,6 +170,12 @@
       color: $inputFocusTextColors;
     }
   }
+  &:valid {
+    border: px solid $inputFocusTextColors;
+  }
+  &:invalid {
+    border: 1px solid rgb(253, 71, 71);
+  }
 }
 
 // button form
@@ -208,6 +214,7 @@
   position: absolute;
   z-index: 3;
   box-sizing: border-box;
+  cursor: pointer;
   width: 170px;
   height: 35px;
 
@@ -260,3 +267,4 @@
     animation-duration: 1.4s;
   }
 }
+

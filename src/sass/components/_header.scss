@@ -79,6 +79,7 @@
 
 // icons-soc
 .list-soc {
+  position: relative;
   display: flex;
   gap: 15px;
 
@@ -94,6 +95,7 @@
     width: 38px;
     height: 38px;
 
+    cursor: pointer;
     border-radius: 50%;
     background-color: #d5e9f5;
     &:hover .soc-icon,
@@ -341,7 +343,6 @@
   z-index: 13;
   top: -300px;
   margin: 0 auto;
-  left: 6px;
   max-width: 280px;
   height: 300px;
 }
