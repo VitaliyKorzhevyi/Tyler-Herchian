@@ -73,7 +73,7 @@
   border-radius: 20px;
   top: -280px;
   margin: 60px auto 0;
-  width: 345px;
+  min-width: 305px;
 
   @include breakpoint(desktop) {
     display: none;
@@ -101,7 +101,7 @@
   position: relative;
   width: 270px;
   height: 275px;
-  left: 75px;
+  left: 55px;
   top: -12px;
 
   background: #52ffffe3;
@@ -169,12 +169,6 @@
     &::placeholder {
       color: $inputFocusTextColors;
     }
-  }
-  &:valid {
-    border: px solid $inputFocusTextColors;
-  }
-  &:invalid {
-    border: 1px solid rgb(253, 71, 71);
   }
 }
 
@@ -255,6 +249,17 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    svg {
+      stroke: $primaryTextColors;
+    }
+    &:hover p,
+    &:focus p {
+      color: #b8b4b4;
+    }
+    &:hover svg,
+    &:focus svg {
+      stroke: #b8b4b4;
+    }
   }
   p {
     @include font($primary-font, 400, 20px, calc(20 / 20), $primaryTextColors);
@@ -268,3 +273,17 @@
   }
 }
 
+.validation-message,
+.email-validation-message,
+.message-validationMessage {
+  @include breakpoint(desktop) {
+    @include font($error-font, 400, 14px, calc(15 / 12), #ff1f1f);
+   margin-top: 4px;
+  }
+
+  @include breakpoint(tablet-max) {
+    @include font($error-font, 400, 12px, calc(15 / 12), #ff1f1f);
+  }
+  position: absolute;
+  z-index: 1;
+}

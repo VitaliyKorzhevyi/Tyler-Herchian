@@ -19,8 +19,9 @@
             placeholder="Name"
             class="form-input"
             minlength="3"
-            maxlength="30"
+            maxlength="50"
           />
+          <p id="validationMessage" class="validation-message"></p>
         </label>
         </div>
 
@@ -33,6 +34,7 @@
             placeholder="Email"
             class="form-input"
           />
+          <p id="emailValidationMessage" class="email-validation-message"></p>
         </div>
 
         <div class="form-item">
@@ -45,8 +47,9 @@
             class="form-input"
             rows="3"
             minlength="10"
-            maxlength="300"
+            maxlength="2000"
           ></textarea>
+          <p id="messageValidationMessage" class="message-validationMessage"></p>
         </div>
 
         <div class="contact-btn-border1">
@@ -75,7 +78,7 @@
 
       <ul class="wow communication-list">
         <li>
-          <a class="contact__link" href="tel:2623257724">
+          <a href="tel:2623257724">
             <svg width="25" height="25">
               <use href="images/symbol-defs.svg#icon-phone-contact"></use>
             </svg>
@@ -84,7 +87,7 @@
         </li>
 
         <li>
-          <a class="contact__link" href="mailto:herchian@tylerherchian.com">
+          <a href="mailto:herchian@tylerherchian.com">
             <svg class="contact-icon-mail" width="25" height="25">
               <use href="images/symbol-defs.svg#icon-mail-contact"></use>
             </svg>

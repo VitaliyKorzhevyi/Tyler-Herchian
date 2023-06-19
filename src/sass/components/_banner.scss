@@ -44,6 +44,7 @@
     );
   }
   @include breakpoint(tablet-max) {
+    min-width: 40px;
     @include font(
       $secondary-font,
       400,
@@ -190,7 +191,7 @@
   position: relative;
   width: 256px;
   height: 241px;
-  left: 90px;
+  left: 50px;
   top: -970px;
 
   background: #43a5ff;
