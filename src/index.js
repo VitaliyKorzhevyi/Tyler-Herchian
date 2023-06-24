@@ -1,8 +1,7 @@
 import Notiflix from 'notiflix';
-
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 AOS.init({
   delay: 0,
   duration: 1000,
@@ -10,8 +9,31 @@ AOS.init({
   once: true,
 });
 
+const forName = document.querySelector('#forName');
+const forEmail = document.querySelector('#forEmail');
+const formMessage = document.querySelector('#formMessage');
+const submitButton = document.querySelector('#submitForm');
 
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.querySelector('.backdrop-menu');
+const bodyScrollLock = document.querySelector('body');
+const itemMenu = document.querySelectorAll('.item-menu-closes');
 
+const servicesList = document.querySelector('.services-list');
+const servicesLines = document.querySelectorAll('.services-lines span');
+
+const input = document.getElementById('forName');
+const validationMessage = document.getElementById('validationMessage');
+const emailInput = document.getElementById('forEmail');
+const emailValidationMessage = document.getElementById(
+  'emailValidationMessage'
+);
+const messageInput = document.getElementById('formMessage');
+const messageValidationMessage = document.getElementById(
+  'messageValidationMessage'
+);
+
+// отправка, проверка формы и ответ
 const handlerForm = e => {
   e.preventDefault();
   const username = forName.value.trim();
@@ -32,7 +54,7 @@ const handlerForm = e => {
 
   console.log(formData, 'formData');
 
-  fetch('mail', {
+  fetch('http://localhost:5000', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -47,7 +69,7 @@ const handlerForm = e => {
       if (response.status === 429) {
         throw new Error(429);
       }
-      
+
       if (!response.ok) {
         throw new Error('Error response');
       }
@@ -56,7 +78,7 @@ const handlerForm = e => {
     })
     .then(data => {
       Notiflix.Notify.success('Your message has been sent!');
-      
+
       // Очищаем значения полей формы после успешной отправки
       forName.value = '';
       forEmail.value = '';
@@ -72,18 +94,10 @@ const handlerForm = e => {
       }
     });
 };
-
-const forName = document.querySelector('#forName');
-const forEmail = document.querySelector('#forEmail');
-const formMessage = document.querySelector('#formMessage');
-const submitButton = document.querySelector('#submitForm');
-
 submitButton.addEventListener('click', handlerForm);
 
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.querySelector('.backdrop-menu');
-const bodyScrollLock = document.querySelector('body');
 
+// --------------- кнопка открытия и закрытия мобильного меню
 menuToggle.addEventListener('click', onBtnToggleClass);
 function onBtnToggleClass() {
   menuToggle.classList.toggle('open');
@@ -91,15 +105,12 @@ function onBtnToggleClass() {
   bodyScrollLock.classList.toggle('no-scroll');
 }
 
-const itemMenu = document.querySelectorAll('.item-menu-closes');
-
 itemMenu.forEach(itemMenu => {
   itemMenu.addEventListener('click', onBtnToggleClass);
 });
 
-const servicesList = document.querySelector('.services-list');
-const servicesLines = document.querySelectorAll('.services-lines span');
 
+// ---------------- горизонтальный скрол
 servicesList.addEventListener('scroll', updateLinesHeight);
 window.addEventListener('load', updateLinesHeight);
 
@@ -129,24 +140,28 @@ window.matchMedia('(min-width: 320px)').addEventListener('change', e => {
 });
 
 
-const input = document.getElementById('forName');
-const validationMessage = document.getElementById('validationMessage');
-
+//------------- валидация инпутов
 input.addEventListener('input', function () {
+  validateInput(input, validationMessage, 3);
+});
+
+messageInput.addEventListener('input', function () {
+  validateInput(messageInput, messageValidationMessage, 10);
+});
+
+function validateInput(input, validationMessage, minLength) {
   const inputValue = input.value;
-  if (inputValue.length < 3) {
-    validationMessage.textContent = 'Min. 3 characters';
+  if (inputValue.length < minLength) {
+    validationMessage.textContent = `Min. ${minLength} characters`;
   } else {
     validationMessage.textContent = '';
   }
-  
+
   if (inputValue.length === 0) {
     validationMessage.textContent = '';
   }
-});
+}
 
-const emailInput = document.getElementById('forEmail');
-const emailValidationMessage = document.getElementById('emailValidationMessage');
 
 emailInput.addEventListener('input', function () {
   const emailValue = emailInput.value;
@@ -156,22 +171,6 @@ emailInput.addEventListener('input', function () {
     emailValidationMessage.textContent = 'Invalid email format';
   } else {
     emailValidationMessage.textContent = '';
-  }
-});
-
-const messageInput = document.getElementById('formMessage');
-const messageValidationMessage = document.getElementById('messageValidationMessage');
-
-messageInput.addEventListener('input', function () {
-  const messageValue = messageInput.value;
-  if (messageValue.length < 10) {
-    messageValidationMessage.textContent = 'Min. 10 characters';
-  } else {
-    messageValidationMessage.textContent = '';
-  }
-  
-  if (messageValue.length === 0) {
-    messageValidationMessage.textContent = '';
   }
 });
 

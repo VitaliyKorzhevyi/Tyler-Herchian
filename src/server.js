@@ -1,6 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const app = express();
+const PORT = 5000;
 const cors = require('cors');
 const Joi = require('joi');
 require('dotenv').config();
@@ -61,8 +62,6 @@ console.log(process.env.SMTP_USER);
     }
   });
 });
-
-const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
